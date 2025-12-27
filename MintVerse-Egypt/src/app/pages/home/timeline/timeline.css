@@ -1,0 +1,124 @@
+.timeline-section {
+  padding: 100px 0;
+  background-color: #fcfcfc;
+  direction: rtl;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.gold-text { color: #d4af37; }
+
+.timeline-wrapper {
+  position: relative;
+  padding: 40px 0;
+}
+
+/* الخط الأفقي الواصل */
+.main-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #d4af37, #c0c0c0, #d4af37);
+  z-index: 1;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* النقاط على الخط */
+.coin-point {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  border: 4px solid #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.gold-point { background-color: #d4af37; }
+.silver-point { background-color: #c0c0c0; }
+.modern-point { background-color: #333; }
+
+/* صناديق المحتوى */
+.content-box {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #eee;
+  transition: 0.3s ease;
+  min-height: 180px;
+}
+
+.era-tag {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.content-box h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #1a1a1a;
+}
+
+.content-box p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* تأثيرات الظلال */
+.shadow-gold:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(212, 175, 55, 0.2);
+  border-color: #d4af37;
+}
+
+.shadow-silver:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(192, 192, 192, 0.2);
+  border-color: #c0c0c0;
+}
+
+/* لجعل التايم لاين متعرج (واحدة فوق وواحدة تحت) */
+.mt-50 {
+  margin-top: 100px;
+}
+.mt-50 .coin-point {
+  order: -1; /* يرفع النقطة لتكون هي اللي على الخط */
+  margin-top: -113px;
+}
+
+/* للموبايل */
+@media (max-width: 992px) {
+  .main-line { display: none; }
+  .timeline-grid { grid-template-columns: 1fr; gap: 40px; }
+  .mt-50 { margin-top: 0; }
+  .mt-50 .coin-point { order: 0; margin-top: 0; }
+}

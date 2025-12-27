@@ -1,0 +1,151 @@
+.main-header {
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  direction: rtl;
+}
+
+.top-bar {
+  height: 4px;
+  background: linear-gradient(to right, #b8860b, #d4af37, #f3e5ab);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+}
+.logo-icon-fa {
+  color: #d4af37;
+  font-size: 1.5rem;
+}
+/* تصميم اللوجو */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.logo-circle {
+  width: 50px;
+  height: 50px;
+  background: #1a1a1a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border: 2px solid #d4af37;
+}
+
+.shadow-gold {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+.brand-name {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.gold-text { color: #d4af37; }
+
+.brand-tagline {
+  font-size: 0.75rem;
+  color: #888;
+  margin: 0;
+}
+
+/* الروابط */
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: 0.3s;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.main-nav a:hover, .main-nav a.active {
+  color: #d4af37;
+}
+
+.main-nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: #d4af37;
+}
+
+/* الأزرار */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #666;
+  transition: 0.3s;
+}
+
+.search-btn:hover { color: #d4af37; }
+
+.contact-btn {
+  background: linear-gradient(45deg, #1a1a1a, #333);
+  color: #fff;
+  border: 1px solid #d4af37;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background: #d4af37;
+  color: #1a1a1a;
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* الموبايل */
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .main-nav { display: none; }
+  .mobile-menu-btn { display: flex; }
+}

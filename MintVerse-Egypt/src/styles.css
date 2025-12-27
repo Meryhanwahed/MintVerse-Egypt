@@ -1,0 +1,60 @@
+/* استيراد خط كاييرو العربي الفخم */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap');
+
+:root {
+  /* متغيرات الألوان الملكية */
+  --gold-primary: #d4af37;
+  --gold-light: #f3e5ab;
+  --gold-dark: #b8860b;
+  --silver-primary: #c0c0c0;
+  --silver-light: #e0e0e0;
+  --white: #ffffff;
+  --black-bg: #121212;
+  --text-gray: #4a4a4a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  direction: rtl; /* لضبط الاتجاه العربي */
+  background-color: var(--white);
+  color: var(--text-gray);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* تنسيقات عامة للعناوين */
+h1, h2, h3, h4 {
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+/* زر عام بنمط ذهبي */
+.btn-gold-shared {
+  background: linear-gradient(45deg, var(--gold-dark), var(--gold-primary));
+  color: white;
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-gold-shared:hover {
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+  transform: translateY(-2px);
+}
+
+/* كلاس مخصص للنصوص الذهبية */
+.text-gold-gradient {
+  background: linear-gradient(to right, var(--gold-dark), var(--gold-primary), var(--gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
