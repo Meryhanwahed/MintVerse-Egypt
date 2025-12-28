@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = "dist/MintVerse-Egypt"
+  publish = "dist/MintVerse-Egypt/browser"
 
 [[redirects]]
   from = "/*"
