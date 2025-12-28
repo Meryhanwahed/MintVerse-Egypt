@@ -1,0 +1,123 @@
+.page-header {
+  position: relative;
+  height: 400px; /* طول متوسط مناسب لصفحات المتجر والمتحف */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: url('/assets/images/market-bg.png') center/cover no-repeat;
+  direction: rtl;
+}
+
+/* طبقة الفخامة: تدرج غامق مع لمسة جولد */
+.header-bg-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(26, 26, 26, 0.7) 100%);
+  z-index: 1;
+}
+
+/* إضافة نقش إسلامي كعلامة مائية (اختياري) */
+.header-bg-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  opacity: 0.1;
+  background-image: url('https://www.transparenttextures.com/patterns/arabesque.png'); /* نقش زخرفي */
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Breadcrumb (مسار الصفحة) */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.breadcrumb a {
+  color: #aaa;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.breadcrumb a:hover { color: #d4af37; }
+
+.breadcrumb .separator { color: #d4af37; font-size: 0.7rem; }
+
+.breadcrumb .current { color: #fff; font-weight: 600; }
+
+/* العنوان */
+.title-wrapper { position: relative; }
+
+.decorated-line {
+  width: 60px;
+  height: 4px;
+  background: #d4af37;
+  margin-bottom: 15px;
+  border-radius: 2px;
+}
+
+.page-title {
+  font-size: 3.5rem;
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.gold-text {
+  color: #d4af37;
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+.page-subtitle {
+  color: #ccc;
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* الأيقونات الطائرة (Creative Touch) */
+.floating-assets i {
+  position: absolute;
+  color: rgba(212, 175, 55, 0.2);
+  z-index: -1;
+}
+
+.coin-1 {
+  font-size: 8rem;
+  top: -50px;
+  left: 10%;
+  transform: rotate(-20deg);
+  animation: float-slow 8s infinite ease-in-out;
+}
+
+.coin-2 {
+  font-size: 5rem;
+  bottom: -20px;
+  left: 30%;
+  transform: rotate(15deg);
+  animation: float-slow 6s infinite ease-in-out reverse;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(-20deg); }
+  50% { transform: translateY(-20px) rotate(-10deg); }
+}
+
+/* التجاوب */
+@media (max-width: 768px) {
+  .page-header { height: 300px; text-align: center; }
+  .breadcrumb { justify-content: center; }
+  .decorated-line { margin: 0 auto 15px; }
+  .page-title { font-size: 2.2rem; }
+  .page-subtitle { font-size: 1rem; margin: 0 auto; }
+}

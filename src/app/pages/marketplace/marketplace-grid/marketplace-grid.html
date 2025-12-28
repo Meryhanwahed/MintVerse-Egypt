@@ -1,0 +1,47 @@
+<section class="marketplace-grid-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>استكشف مجموعتنا <span class="gold-text">الكاملة</span></h2>
+      <p>تصفح آلاف العملات المصرية النادرة من مختلف العصور والحقب التاريخية.</p>
+    </div>
+
+    <div class="products-grid">
+      <div class="product-card" *ngFor="let coin of coins">
+        <div class="product-image-wrapper">
+          <img [src]="coin.imageUrl" [alt]="coin.name">
+          <div class="zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
+          <div class="quick-view-btn"><i class="fas fa-eye"></i> نظرة سريعة</div>
+        </div>
+
+        <div class="product-details">
+          <span class="era-tag">{{ coin.era }}</span>
+          <h3>{{ coin.name }}</h3>
+          <p class="year">إصدار: {{ coin.year }}</p>
+
+          <div class="price-action">
+            <span class="price">{{ coin.price | currency:'EGP ':'symbol':'1.0-0' }}</span>
+            <button class="add-to-cart-btn" (click)="addToCart(coin.id)">
+              <i class="fas fa-shopping-basket"></i>
+              أضف للسلة
+            </button>
+          </div>
+        </div>
+      </div>
+      </div>
+
+    <div class="load-more-btn-wrapper">
+      <button class="load-more-btn">
+        عرض المزيد من العملات
+        <i class="fas fa-arrow-down"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<div class="quick-view-modal" *ngIf="showQuickView">
+  <div class="modal-content">
+    <span class="close-modal" (click)="closeQuickView()">&times;</span>
+    <h3>تفاصيل سريعة للعملة</h3>
+    <p>هنا ستظهر تفاصيل العملة عند الضغط على "نظرة سريعة".</p>
+  </div>
+</div>

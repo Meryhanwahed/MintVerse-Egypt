@@ -1,0 +1,229 @@
+.marketplace-grid-section {
+  padding: 80px 0;
+  background-color: #f7f7f7;
+  direction: rtl;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 2.2rem;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.gold-text { color: #d4af37; }
+
+.section-title p {
+  font-size: 1.1rem;
+  color: #777;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* شبكة المنتجات */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(212, 175, 55, 0.15);
+  border-color: #d4af37;
+}
+
+/* الصورة */
+.product-image-wrapper {
+  position: relative;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fcfcfc;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+}
+
+.product-image-wrapper img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+  filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
+}
+
+.product-card:hover .product-image-wrapper img {
+  transform: scale(1.05); /* تأثير زووم خفيف عند التحويم */
+}
+
+/* أيقونات الزووم والنظرة السريعة */
+.zoom-icon, .quick-view-btn {
+  position: absolute;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.zoom-icon { top: 10px; left: 10px; }
+.quick-view-btn { bottom: 10px; left: 50%; transform: translateX(-50%); }
+
+.product-card:hover .zoom-icon,
+.product-card:hover .quick-view-btn { opacity: 1; }
+
+
+/* تفاصيل المنتج */
+.product-details {
+  padding: 20px;
+  text-align: right; /* المحاذاة لليمين */
+}
+
+.era-tag {
+  background: #eef;
+  color: #5b5be7;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.product-details h3 {
+  font-size: 1.3rem;
+  color: #1a1a1a;
+  margin: 10px 0;
+  line-height: 1.4;
+}
+
+.product-details .year {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.price-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.price {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.add-to-cart-btn {
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background: #d4af37;
+  color: #1a1a1a;
+}
+
+/* زر عرض المزيد */
+.load-more-btn-wrapper {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.load-more-btn {
+  background: #e0e0e0;
+  color: #444;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.load-more-btn i { transition: transform 0.3s; }
+
+.load-more-btn:hover {
+  background: #d4af37;
+  color: #1a1a1a;
+}
+
+.load-more-btn:hover i { transform: translateY(5px); }
+
+
+/* مودال النظرة السريعة */
+.quick-view-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001; /* فوق كل شيء */
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  text-align: right;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #888;
+}
+
+/* التجاوب */
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}

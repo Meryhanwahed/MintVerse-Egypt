@@ -1,0 +1,77 @@
+<section class="auction-section">
+  <div class="container">
+    <div class="section-title">
+      <span class="badge auction-badge"><i class="fas fa-gavel"></i> مزاد حي الآن</span>
+      <h2><span class="gold-text">نوادر</span> لا تقدر بثمن</h2>
+      <p>فرصتك الذهبية لاقتناء قطع تاريخية فريدة ونادرة، لا تتكرر!</p>
+    </div>
+
+    <div class="auction-items-grid">
+      <div class="auction-card">
+        <div class="card-image-auction">
+          <img src="assets/coins/ancient-gold-coin.png" alt="دينار فاطمي نادر">
+          <div class="time-left">
+            <i class="fas fa-clock"></i>
+            <span>ينتهي خلال: 02:15:30</span>
+          </div>
+        </div>
+        <div class="card-details-auction">
+          <h3>دينار فاطمي - الخليفة المعز</h3>
+          <p class="description">دينار ذهبي نادر يعود للعهد الفاطمي، يحمل نقوشاً فريدة وتفاصيل تاريخية غاية في الأهمية.</p>
+
+          <div class="bid-info">
+            <div class="current-bid">
+              <label>أعلى مزايدة حالية:</label>
+              <span class="price">75,000 <small>ج.م</small></span>
+            </div>
+            <div class="bidders-count">
+              <i class="fas fa-users"></i>
+              <span>12 مزايد</span>
+            </div>
+          </div>
+
+          <button class="place-bid-btn" (click)="placeBid('auction1')">
+            قدم مزايدتك
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="auction-card">
+        <div class="card-image-auction">
+          <img src="assets/coins/ottoman-silver-coin.png" alt="قرش عثماني فضة">
+          <div class="time-left">
+            <i class="fas fa-clock"></i>
+            <span>ينتهي خلال: 01:45:10</span>
+          </div>
+        </div>
+        <div class="card-details-auction">
+          <h3>قرش عثماني - السلطان عبد الحميد الثاني</h3>
+          <p class="description">عملة فضية نادرة من العصر العثماني، تعكس الفن الإسلامي والخط العربي المميز لتلك الحقبة.</p>
+
+          <div class="bid-info">
+            <div class="current-bid">
+              <label>أعلى مزايدة حالية:</label>
+              <span class="price">12,000 <small>ج.م</small></span>
+            </div>
+            <div class="bidders-count">
+              <i class="fas fa-users"></i>
+              <span>8 مزايدين</span>
+            </div>
+          </div>
+
+          <button class="place-bid-btn" (click)="placeBid('auction2')">
+            قدم مزايدتك
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="auction-cta">
+      <h3>هل لديك عملات نادرة للبيع في المزاد؟</h3>
+      <button class="sell-coin-btn">اعرض عملتك الآن <i class="fas fa-upload"></i></button>
+    </div>
+
+  </div>
+</section>

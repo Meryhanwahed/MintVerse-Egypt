@@ -1,0 +1,238 @@
+.auction-section {
+  padding: 80px 0;
+  background-color: #fcfcfc;
+  direction: rtl;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.auction-badge {
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  margin: 15px 0;
+  color: #1a1a1a;
+}
+
+.gold-text { color: #d4af37; }
+
+.section-title p {
+  font-size: 1.1rem;
+  color: #777;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* شبكة عناصر المزاد */
+.auction-items-grid {
+  display: flex; /* ليكونوا بجانب بعض */
+  gap: 40px;
+  justify-content: center; /* توسيط العناصر */
+}
+
+.auction-card {
+  display: flex;
+  flex-direction: column; /* جعل الصورة والتفاصيل فوق بعض */
+  width: 45%; /* أو استخدام max-width: 550px; */
+  background: #fff;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: all 0.4s ease;
+  border: 1px solid #eee;
+}
+
+.auction-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 55px rgba(212, 175, 55, 0.18);
+  border-color: #d4af37;
+}
+
+/* صورة العملة في المزاد */
+.card-image-auction {
+  position: relative;
+  height: 300px;
+  background: #fdfcfc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+}
+
+.card-image-auction img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+  transition: transform 0.5s ease;
+}
+
+.auction-card:hover .card-image-auction img {
+  transform: scale(1.08) rotate(5deg);
+}
+
+.time-left {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  border: 1px solid #d4af37;
+}
+
+/* تفاصيل العملة */
+.card-details-auction {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* لجعلها تملأ المساحة المتبقية */
+}
+
+.card-details-auction h3 {
+  font-size: 1.6rem;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.card-details-auction .description {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  flex-grow: 1; /* لجعل الوصف يملأ المساحة */
+}
+
+.bid-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.current-bid {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.current-bid label {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.current-bid .price {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.current-bid .price small { font-size: 1rem; color: #888; }
+
+.bidders-count {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  color: #555;
+  background: #f0f0f0;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+.bidders-count i { color: #d4af37; }
+
+.place-bid-btn {
+  background: linear-gradient(45deg, #d4af37, #b8860b);
+  color: #1a1a1a;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  transition: 0.3s;
+  width: 100%; /* زر يملأ العرض */
+}
+
+.place-bid-btn:hover {
+  background: #1a1a1a;
+  color: #d4af37;
+}
+
+/* قسم عرض العملة للمزاد */
+.auction-cta {
+  text-align: center;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 50px;
+  border-radius: 25px;
+  margin-top: 80px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.auction-cta h3 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #d4af37;
+}
+
+.sell-coin-btn {
+  background: #d4af37;
+  color: #1a1a1a;
+  border: none;
+  padding: 15px 45px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  transition: 0.3s;
+}
+
+.sell-coin-btn:hover {
+  background: #fff;
+  color: #1a1a1a;
+}
+
+/* التجاوب */
+@media (max-width: 992px) {
+  .auction-items-grid {
+    flex-direction: column;
+  }
+  .auction-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
