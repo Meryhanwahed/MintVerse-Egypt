@@ -1,0 +1,55 @@
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="gold-badge">المساعدة الفورية</span>
+      <h2>الأسئلة <span class="gold-text">الشائعة</span></h2>
+      <p>كل ما تود معرفته عن اقتناء وتوثيق العملات المصرية</p>
+    </div>
+
+    <div class="faq-accordion">
+      <div class="faq-item" [class.active]="activeIndex === 0" (click)="toggleFAQ(0)">
+        <div class="faq-question">
+          <span class="q-icon"><i class="fas fa-coins"></i></span>
+          <h3>كيف يمكنني الحصول على العملات التذكارية الجديدة؟</h3>
+          <i class="fas fa-chevron-down arrow"></i>
+        </div>
+        <div class="faq-answer">
+          <p>يمكنك الحصول عليها مباشرة من خلال متجرنا الإلكتروني، أو بزيارة مقر مصلحة الخزانة العامة وسك العملة بالدراسة، أو عبر منافذ البيع الرسمية التابعة لوزارة المالية.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" [class.active]="activeIndex === 1" (click)="toggleFAQ(1)">
+        <div class="faq-question">
+          <span class="q-icon"><i class="fas fa-certificate"></i></span>
+          <h3>هل جميع القطع المعروضة أصلية وموثقة؟</h3>
+          <i class="fas fa-chevron-down arrow"></i>
+        </div>
+        <div class="faq-answer">
+          <p>نعم، جميع العملات والميداليات والمسكوكات تخرج من "دار سك العملة المصرية" مباشرة وتأتي مع شهادة توثيق رسمية مختومة بختم النسر لضمان أصالتها وعيار المعدن.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" [class.active]="activeIndex === 2" (click)="toggleFAQ(2)">
+        <div class="faq-question">
+          <span class="q-icon"><i class="fas fa-truck-fast"></i></span>
+          <h3>هل يتوفر شحن للمحافظات أو خارج مصر؟</h3>
+          <i class="fas fa-chevron-down arrow"></i>
+        </div>
+        <div class="faq-answer">
+          <p>نعم، نوفر خدمة التوصيل الآمن لجميع محافظات الجمهورية، وبالنسبة للشحن الدولي، يتطلب ذلك إجراءات خاصة نظراً لقيمة القطع، يمكنك التواصل معنا للتنسيق.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" [class.active]="activeIndex === 3" (click)="toggleFAQ(3)">
+        <div class="faq-question">
+          <span class="q-icon"><i class="fas fa-university"></i></span>
+          <h3>كيف يمكنني حجز جولة داخل متحف مصلحة السك؟</h3>
+          <i class="fas fa-chevron-down arrow"></i>
+        </div>
+        <div class="faq-answer">
+          <p>المتحف مفتوح للجمهور يومياً من 9 صباحاً وحتى 2 ظهراً (ماعدا الجمعة والسبت). للمجموعات والرحلات المدرسية، يفضل الحجز المسبق عبر نموذج "تواصل معنا" المتاح بالصفحة.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

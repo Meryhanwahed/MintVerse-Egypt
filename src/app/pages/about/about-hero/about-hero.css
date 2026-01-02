@@ -1,0 +1,134 @@
+.about-hero {
+  position: relative;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  background: url('/assets/about-bg.png') center/cover no-repeat;
+  background-attachment: fixed; /* تأثير Parallax */
+  direction: rtl;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to left, rgba(10, 10, 10, 0.9) 40%, rgba(10, 10, 10, 0.5) 100%);
+  z-index: 1;
+}
+
+.about-content {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-wrapper { flex: 1; }
+
+.top-label {
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.fade-in-title {
+  font-size: 4rem;
+  color: #fff;
+  line-height: 1.1;
+  font-weight: 900;
+  margin-bottom: 25px;
+}
+
+.gold-gradient {
+  background: linear-gradient(45deg, #d4af37, #f3e5ab, #b8860b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-desc {
+  color: #ccc;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+/* الأرقام السريعة */
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.stat-item { display: flex; flex-direction: column; }
+
+.stat-num {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+.stat-label {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.stat-sep {
+  width: 2px;
+  height: 40px;
+  background: rgba(212, 175, 55, 0.3);
+}
+
+/* العنصر البصري */
+.hero-visual {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+}
+
+.giant-coin {
+  font-size: 15rem;
+  color: rgba(212, 175, 55, 0.1);
+  filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.2));
+  animation: rotate-coin 15s linear infinite;
+}
+
+@keyframes rotate-coin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+/* سهم النزول */
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+}
+
+.scroll-down span { display: block; font-size: 0.8rem; margin-bottom: 5px; color: #d4af37; }
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+  40% { transform: translateY(-10px) translateX(-50%); }
+  60% { transform: translateY(-5px) translateX(-50%); }
+}
+
+/* التجاوب */
+@media (max-width: 992px) {
+  .fade-in-title { font-size: 2.5rem; }
+  .hero-visual { display: none; }
+}

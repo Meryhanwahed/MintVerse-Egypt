@@ -1,0 +1,121 @@
+.pillars-section {
+  padding: 100px 0;
+  background-color: #fcfcfc;
+  direction: rtl;
+  perspective: 1000px; /* ضروري لتأثير الـ 3D */
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.title { font-size: 2.8rem; color: #1a1a1a; }
+.gold-text { color: #d4af37; }
+.subtitle { color: #777; font-size: 1.1rem; margin-top: 10px; }
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+/* حاوية الكارت للتحكم في الأبعاد */
+.pillar-card-wrapper {
+  height: 400px;
+  cursor: pointer;
+}
+
+/* الكارت الأساسي */
+.pillar-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+}
+
+.pillar-card-wrapper:hover .pillar-card {
+  transform: rotateY(180deg);
+}
+
+/* الوجهين */
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* إخفاء الوجه الخلفي عند ظهور الأمامي */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  border-radius: 30px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+/* الوجه الأمامي */
+.card-front {
+  background: #fff;
+}
+
+.icon-circle {
+  width: 100px;
+  height: 100px;
+  background: #1a1a1a;
+  color: #d4af37;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  transition: 0.5s;
+}
+
+.card-front h3 {
+  font-size: 1.6rem;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.tap-hint {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-top: 20px;
+}
+
+/* الوجه الخلفي */
+.card-back {
+  background: #1a1a1a;
+  color: #fff;
+  transform: rotateY(180deg);
+  text-align: center;
+}
+
+.card-back h4 {
+  font-size: 1.4rem;
+  color: #d4af37;
+  margin-bottom: 20px;
+}
+
+.card-back p {
+  line-height: 1.8;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.pillar-tag {
+  margin-top: 30px;
+  padding: 5px 15px;
+  border: 1px solid #d4af37;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  color: #d4af37;
+}
+
+/* التجاوب */
+@media (max-width: 768px) {
+  .pillar-card-wrapper { height: 350px; }
+}
