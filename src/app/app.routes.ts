@@ -1,6 +1,11 @@
 import { Routes } from '@angular/router';
-
+import { MainLayout } from './layouts/main-layout/main-layout';
+import { AuthLayout } from './layouts/auth-layout/auth-layout';
 export const routes: Routes = [
+  {
+    path: '',
+    component: MainLayout,
+    children: [
   {
     path: '',
     loadComponent: () =>
@@ -21,4 +26,29 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/contact-us/contact-us').then(m => m.ContactUs),
   }
+]
+},
+{
+    path: '',
+    component: AuthLayout,
+    children: [
+  {
+    path: 'login',
+    loadComponent: () =>
+      import('./pages/login/login').then(m => m.Login),
+  },
+   {
+    path: 'signup',
+    loadComponent: () =>
+      import('./pages/signup/signup').then(m => m.Signup),
+  }
+]
+},
+
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full'
+  }
+
 ];

@@ -3,7 +3,7 @@
   height: 85vh;
   display: flex;
   align-items: center;
-  background: url('/assets/about-bg.png') center/cover no-repeat;
+  background: url('/assets/bg.png') center/cover no-repeat;
   background-attachment: fixed; /* تأثير Parallax */
   direction: rtl;
   overflow: hidden;
