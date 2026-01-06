@@ -1,0 +1,33 @@
+<section class="timeline-section">
+  <div class="timeline-header">
+    <h2>رحلة العملة المصرية عبر <span class="gold-text">الزمن</span></h2>
+    <p>اسحب لليسار أو اليمين لاستكشاف التطور التاريخي</p>
+  </div>
+
+  <div class="timeline-container" #timelineContainer>
+    <div class="main-line">
+      <div class="progress-line" [style.width.%]="scrollProgress"></div>
+    </div>
+
+    <div class="timeline-track">
+      @for (era of timelineEras; track era.id) {
+        <div class="timeline-item">
+          <div class="node-wrapper">
+            <div class="time-node" [class.active]="scrollProgress >= era.threshold"></div>
+            <span class="year-label">{{ era.year }}</span>
+          </div>
+
+          <div class="era-card">
+            <div class="era-image">
+              <img [src]="era.image" [alt]="era.title">
+            </div>
+            <div class="era-info">
+              <h3>{{ era.title }}</h3>
+              <p>{{ era.description }}</p>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

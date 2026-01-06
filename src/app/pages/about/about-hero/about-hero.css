@@ -3,7 +3,7 @@
   height: 85vh;
   display: flex;
   align-items: center;
-  background: url('/assets/bg.png') center/cover no-repeat;
+  background: url('/assets/hero.jpeg') center/cover no-repeat;
   background-attachment: fixed; /* تأثير Parallax */
   direction: rtl;
   overflow: hidden;
@@ -12,7 +12,7 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to left, rgba(10, 10, 10, 0.9) 40%, rgba(10, 10, 10, 0.5) 100%);
+  background: linear-gradient(to left, rgba(62, 59, 41, 0.9) 40%, rgba(175, 176, 152, 0.5) 100%);
   z-index: 1;
 }
 

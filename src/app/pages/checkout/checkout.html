@@ -1,0 +1,107 @@
+<div class="checkout-wrapper">
+  <div class="container">
+
+    <div class="checkout-header" data-aos="fade-down">
+      <h1>مراجعة طلب الاقتناء</h1>
+      <div class="gold-divider"></div>
+      <p>يرجى إدخال البيانات لإتمام شحن مقتنياتك الملكية</p>
+    </div>
+
+    <div class="checkout-grid">
+
+      <div class="billing-section" data-aos="fade-right">
+        <div class="section-title">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>عنوان التوصيل</span>
+        </div>
+
+        <form class="checkout-form">
+          <div class="input-row">
+            <div class="input-group">
+              <label>الاسم الكامل</label>
+              <input type="text" placeholder="مثال: محمد أحمد">
+            </div>
+            <div class="input-group">
+              <label>رقم الهاتف</label>
+              <input type="tel" placeholder="01xxxxxxxxx">
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>المحافظة / المدينة</label>
+            <select>
+              <option>القاهرة</option>
+              <option>الإسكندرية</option>
+              <option>الجيزة</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label>العنوان التفصيلي</label>
+            <textarea rows="3" placeholder="اسم الشارع، رقم المبنى، الشقة..."></textarea>
+          </div>
+        </form>
+
+        <div class="section-title mt-4">
+          <i class="fas fa-credit-card"></i>
+          <span>طريقة الدفع</span>
+        </div>
+        <div class="payment-methods">
+          <div class="method-card active">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>الدفع عند الاستلام</span>
+          </div>
+          <div class="method-card">
+            <i class="fab fa-cc-visa"></i>
+            <span>بطاقة ائتمان</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="summary-section" data-aos="fade-left">
+        <div class="summary-card">
+          <h3>ملخص المقتنيات</h3>
+
+          <div class="items-list">
+            <div class="summary-item">
+              <img src="assets/coins/2.png" alt="coin">
+              <div class="item-info">
+                <h4>ريال السلطان فؤاد</h4>
+                <span>الكمية: 1</span>
+              </div>
+              <span class="item-price">1,200 ج.م</span>
+            </div>
+
+            <div class="summary-item">
+              <img src="assets/coins/1.png" alt="coin">
+              <div class="item-info">
+                <h4>ميدالية تذكارية ذهبية</h4>
+                <span>الكمية: 2</span>
+              </div>
+              <span class="item-price">5,000 ج.م</span>
+            </div>
+          </div>
+
+          <div class="summary-footer">
+            <div class="calc-row">
+              <span>الإجمالي الفرعي:</span>
+              <span>6,200 ج.م</span>
+            </div>
+            <div class="calc-row">
+              <span>مصاريف الشحن:</span>
+              <span class="free-text">مجاناً</span>
+            </div>
+            <div class="calc-row total">
+              <span>الإجمالي النهائي:</span>
+              <span class="gold-text">6,200 ج.م</span>
+            </div>
+
+            <button class="place-order-btn" routerLink="/success">تأكيد الطلب الآن</button>
+            <p class="safe-text"><i class="fas fa-lock"></i> جميع البيانات مشفرة وآمنة</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

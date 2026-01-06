@@ -1,0 +1,131 @@
+.mint-hero-section {
+  position: relative;
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #0a0a0a;
+  color: #fff;
+  direction: rtl;
+}
+
+/* الخلفية مع تأثير تعتيم */
+.hero-bg-image {
+  position: absolute;
+  inset: 0;
+  background: url('/assets/mint-bg.jpeg') center/cover no-repeat;
+  filter: grayscale(100%) contrast(1.2);
+  z-index: 1;
+  opacity: 0.4;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #4342428f 20%, rgba(10, 10, 10, 0.7) 50%, transparent 100%);
+  z-index: 2;
+}
+
+.container {
+  position: relative;
+  z-index: 5;
+  padding: 0 10%;
+}
+
+.identity-content { position: relative; max-width: 800px; }
+
+/* النص المائي الخلفي */
+.watermark-text {
+  position: absolute;
+  top: -50px;
+  right: -20px;
+  font-size: 10rem;
+  font-weight: 900;
+  color: rgba(212, 175, 55, 0.03);
+  letter-spacing: 15px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.sub-title {
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.main-title {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.gold-gradient {
+  background: linear-gradient(45deg, #d4af37, #fdf5e6, #b8860b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description-box {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-right: 4px solid #d4af37;
+  border-radius: 0 15px 15px 0;
+}
+
+.description-box p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+/* إحصائيات سريعة */
+.stats-mini {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.stat-num {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d4af37;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.stat-sep {
+  width: 1px;
+  height: 30px;
+  background: #333;
+}
+
+/* ترس دوار للزينة */
+.gear-decoration {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  font-size: 15rem;
+  color: rgba(255, 255, 255, 0.02);
+  animation: rotateGear 20s linear infinite;
+}
+
+@keyframes rotateGear {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .main-title { font-size: 2.2rem; }
+  .description-box { padding: 20px; }
+}

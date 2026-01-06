@@ -1,0 +1,43 @@
+<section class="filter-section">
+  <div class="container">
+
+    <div class="filter-header">
+      <i class="fas fa-sliders-h"></i>
+      <span>تخصيص العرض المتحفي</span>
+    </div>
+
+    <div class="filters-container">
+
+      <div class="filter-group">
+        <h4><i class="fas fa-history"></i> العصر التاريخي</h4>
+        <div class="coin-buttons">
+          @for (era of eras; track era.id) {
+            <button
+              [class.active]="selectedEra === era.id"
+              (click)="selectEra(era.id)"
+              class="coin-btn">
+              <span class="btn-text">{{ era.name }}</span>
+              <div class="coin-shine"></div>
+            </button>
+          }
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <h4><i class="fas fa-gem"></i> نوع المعدن</h4>
+        <div class="coin-buttons">
+          @for (metal of metals; track metal.id) {
+            <button
+              [class.active]="selectedMetal === metal.id"
+              (click)="selectMetal(metal.id)"
+              class="coin-btn metal-btn">
+              <span class="btn-text">{{ metal.name }}</span>
+              <div class="coin-shine"></div>
+            </button>
+          }
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

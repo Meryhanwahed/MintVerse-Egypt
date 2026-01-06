@@ -1,0 +1,27 @@
+<div class="grand-grid-container">
+  <div class="coins-grid">
+    @for (coin of coins; track coin.id) {
+      <div class="coin-card" [attr.data-era]="coin.era">
+        <div class="coin-display">
+          <div class="spotlight"></div>
+          <img [src]="coin.image" [alt]="coin.name" class="coin-img">
+
+          <div class="hover-details">
+            <span class="mint-year">سنة السك: {{ coin.mintYear }}</span>
+            <button class="explore-btn" routerLink="/details" >استكشف القطعة</button>
+          </div>
+        </div>
+
+        <div class="coin-info">
+          <h3 class="coin-name">{{ coin.name }}</h3>
+          <div class="coin-meta">
+            <span class="coin-date"><i class="far fa-calendar-alt"></i> {{ coin.date }}</span>
+            <span class="coin-material" [style.color]="coin.metalColor">
+               <i class="fas fa-circle"></i> {{ coin.material }}
+            </span>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

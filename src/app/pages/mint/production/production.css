@@ -1,0 +1,140 @@
+.mint-steps-section {
+  padding: 100px 0;
+  background: #0f0f0f;
+  color: #fff;
+  direction: rtl;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.step-tag {
+  color: #d4af37;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+}
+
+/* الشغل الأساسي للـ Stepper */
+.stepper-wrapper {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.stepper-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(to bottom, #d4af37 0%, #222 100%);
+  transform: translateX(-50%);
+}
+
+.step-item {
+  position: relative;
+  margin-bottom: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* ترتيب العناصر لليمين */
+}
+
+.step-item.reverse {
+  justify-content: flex-end; /* ترتيب العناصر لليسار للمرحلة الثانية */
+}
+
+/* أيقونة النقطة على الخط */
+.step-icon {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: #1a1a1a;
+  border: 2px solid #d4af37;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  color: #d4af37;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+/* كارت المرحلة */
+.step-card {
+  width: 45%;
+  background: #161616;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #222;
+  transition: 0.4s;
+}
+
+.step-card:hover {
+  border-color: #d4af37;
+  transform: translateY(-10px);
+}
+
+.step-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.step-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+  opacity: 0.7;
+}
+
+.step-card:hover img {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.step-content {
+  padding: 30px;
+}
+
+.step-content h3 {
+  color: #d4af37;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.step-content p {
+  color: #aaa;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 5px 15px;
+  background: rgba(212, 175, 55, 0.1);
+  color: #d4af37;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* تحسينات الموبايل */
+@media (max-width: 768px) {
+  .stepper-line { left: 20px; }
+  .step-icon { left: 20px; }
+  .step-item, .step-item.reverse { justify-content: flex-end; }
+  .step-card { width: 85%; }
+}

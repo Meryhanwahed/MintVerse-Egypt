@@ -1,0 +1,116 @@
+.museum-hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  direction: rtl;
+  /* أضيفي هذا السطر لتفعيل الأبعاد الثلاثية للبارالكس */
+  perspective: 1px;
+}
+
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  /* تأكدي من اسم الملف وامتداده jpg أو png */
+  background: url('/assets/museum-bg.jpg') no-repeat center center;
+  background-size: cover;
+  /* ارفعي قيم الـ z-index لتكون موجبة لتجنب اختفائها خلف الـ body */
+  z-index: 1;
+  transform: translateZ(-1px) scale(2); /* الـ scale مهم عند استخدام translateZ لتعويض صغر الحجم */
+  filter: grayscale(30%);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2; /* أعلى من الخلفية */
+  background: rgba(0, 0, 0, 0.5); /* تأكدي من وجود لون شفاف لتري الصورة خلفه */
+}
+
+.hero-content {
+  max-width: 900px;
+  z-index: 3; /* الأعلى دائماً */
+  position: relative; /* مهم لعمل الـ z-index */
+  padding: 20px;
+}
+/* الأيقونة العلوية */
+.floating-ankh {
+  width: 80px;
+  filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
+  animation: float 4s ease-in-out infinite;
+  margin-bottom: 30px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  text-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.gold-text {
+  color: #d4af37;
+  font-family: 'Amiri', serif; /* يفضل استخدام خط عربي أصيل */
+}
+
+.history-text p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #ddd;
+  margin-bottom: 50px;
+}
+
+/* مؤشر النزول */
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.7;
+}
+
+.mouse {
+  width: 25px;
+  height: 45px;
+  border: 2px solid #d4af37;
+  border-radius: 20px;
+  position: relative;
+}
+
+.mouse::after {
+  content: '';
+  position: absolute;
+  top: 10px; left: 50%;
+  transform: translateX(-50%);
+  width: 4px; height: 8px;
+  background: #d4af37;
+  border-radius: 2px;
+  animation: scrollAnim 2s infinite;
+}
+
+@keyframes scrollAnim {
+  0% { opacity: 1; transform: translate(-50%, 0); }
+  100% { opacity: 0; transform: translate(-50%, 20px); }
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.8rem; }
+  .history-text p { font-size: 1.1rem; }
+}

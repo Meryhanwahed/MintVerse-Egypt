@@ -1,0 +1,58 @@
+.museum-page-wrapper {
+  background: #0a0a0a;
+  min-height: 100vh;
+}
+
+.museum-main-content {
+  position: relative;
+  z-index: 10;
+  margin-top: -50px; /* تداخل بسيط مع الـ Hero لإعطاء عمق */
+}
+
+/* تنسيق الـ Modal الخاص بالتفاصيل */
+.details-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+}
+
+.modal-content {
+  width: 95%;
+  max-width: 1300px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #050505;
+  border: 1px solid #d4af37;
+  border-radius: 30px;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #d4af37;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.museum-footer {
+  padding: 40px;
+  text-align: center;
+  color: #444;
+  border-top: 1px solid #111;
+}

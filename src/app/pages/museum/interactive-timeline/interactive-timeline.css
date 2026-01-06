@@ -1,0 +1,125 @@
+.timeline-section {
+  padding: 100px 0;
+  background: #080808;
+  color: #fff;
+  overflow: hidden;
+  direction: rtl;
+}
+
+.timeline-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.timeline-header h2 { font-size: 2.5rem; margin-bottom: 15px; }
+.gold-text { color: #d4af37; }
+
+/* حاوية الخط الزمني */
+.timeline-container {
+  position: relative;
+  padding: 50px 0;
+  overflow-x: auto;
+  cursor: grab;
+  scrollbar-width: none; /* إخفاء السكرول بار */
+}
+
+.timeline-container::-webkit-scrollbar { display: none; }
+
+/* الخطوط */
+.main-line {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 2500px; /* طول الخط الكلي */
+  height: 2px;
+  background: #222;
+  z-index: 1;
+}
+
+.progress-line {
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #d4af37);
+  box-shadow: 0 0 15px #d4af37;
+  transition: width 0.1s ease-out;
+}
+
+.timeline-track {
+  display: flex;
+  width: 2500px;
+  padding-right: 50px;
+  gap: 300px;
+  position: relative;
+  z-index: 2;
+}
+
+/* النقاط والعناصر */
+.timeline-item {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.node-wrapper {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.time-node {
+  width: 15px;
+  height: 15px;
+  background: #333;
+  border-radius: 50%;
+  border: 2px solid #d4af37;
+  transition: 0.5s;
+}
+
+.time-node.active {
+  background: #d4af37;
+  transform: scale(1.5);
+  box-shadow: 0 0 20px #d4af37;
+}
+
+.year-label {
+  font-weight: bold;
+  color: #d4af37;
+  font-size: 1.2rem;
+}
+
+/* كارت العصر */
+.era-card {
+  background: #111;
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid #222;
+  transition: 0.4s;
+  text-align: center;
+}
+
+.era-image {
+  width: 120px;
+  height: 120px;
+  margin: -60px auto 20px;
+  background: #1a1a1a;
+  border-radius: 50%;
+  border: 4px solid #080808;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.era-image img { width: 80%; transition: 0.5s; }
+
+.era-card:hover {
+  transform: translateY(-10px);
+  border-color: #d4af37;
+}
+
+.era-card:hover img { transform: rotate(15deg) scale(1.1); }
+
+.era-info h3 { color: #fff; margin-bottom: 10px; }
+.era-info p { color: #888; font-size: 0.9rem; line-height: 1.6; }

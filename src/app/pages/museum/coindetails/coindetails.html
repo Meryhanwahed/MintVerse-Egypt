@@ -1,0 +1,54 @@
+<div class="deep-dive-container" id="coin-details">
+  <button class="back-btn"><i class="fas fa-arrow-right"></i> العودة للمتحف</button>
+
+  <div class="content-wrapper">
+    <div class="gallery-side">
+      <div class="main-image-viewer">
+        <div class="zoom-container">
+          <img [src]="activeSide === 'obverse' ? coin.obverseImg : coin.reverseImg"
+               class="zoom-img" alt="Coin Detail">
+        </div>
+        <p class="zoom-hint"><i class="fas fa-search-plus"></i> مرر الماوس للتكبير ودراسة النقوش</p>
+      </div>
+
+      <div class="side-switcher">
+        <button [class.active]="activeSide === 'obverse'" (click)="activeSide = 'obverse'">
+          الوجه (Obverse)
+        </button>
+        <button [class.active]="activeSide === 'reverse'" (click)="activeSide = 'reverse'">
+          الظهر (Reverse)
+        </button>
+      </div>
+    </div>
+
+    <div class="info-side">
+      <header class="coin-header">
+        <span class="era-badge">{{ coin.era }}</span>
+        <h1>{{ coin.name }}</h1>
+        <div class="year-line">{{ coin.dateGregorian }} مـ | {{ coin.dateHijri }} هـ</div>
+      </header>
+
+      <section class="specs-panel">
+        <h3><i class="fas fa-microscope"></i> المواصفات الفنية</h3>
+        <div class="specs-grid">
+          <div class="spec-item"><span>المعدن:</span> <strong>{{ coin.material }}</strong></div>
+          <div class="spec-item"><span>الوزن:</span> <strong>{{ coin.weight }} جرام</strong></div>
+          <div class="spec-item"><span>القطر:</span> <strong>{{ coin.diameter }} ملم</strong></div>
+          <div class="spec-item"><span>دار السك:</span> <strong>{{ coin.mintLocation }}</strong></div>
+        </div>
+      </section>
+
+      <section class="narrative-section">
+        <h3><i class="fas fa-feather-alt"></i> قصة القطعة</h3>
+        <div class="story-content">
+          <p>{{ coin.story }}</p>
+        </div>
+      </section>
+
+      <div class="action-footer">
+        <button class="share-btn"><i class="fas fa-share-alt"></i> مشاركة القطعة</button>
+        <button class="download-cert"><i class="fas fa-file-pdf"></i> تحميل شهادة التوثيق</button>
+      </div>
+    </div>
+  </div>
+</div>

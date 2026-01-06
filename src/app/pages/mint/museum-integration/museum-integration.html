@@ -1,0 +1,39 @@
+<section class="integration-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="badge">من خط الإنتاج إلى المتحف</span>
+      <h2>أعمال فنية <span class="gold-text">خرجت من دارنا</span></h2>
+      <p>كل عملة في المتحف لها قصة بدأت هنا في الضربخانة. استكشف العلاقة بين الآلة والعملة.</p>
+    </div>
+
+    <div class="coin-slider-wrapper">
+      <div class="coin-track">
+        @for (item of linkedCoins; track item.id) {
+          <div class="integration-card">
+            <div class="coin-display-area">
+              <img [src]="item.coinImage" [alt]="item.coinName" class="main-coin">
+              <div class="machine-peek">
+                <i class="fas fa-industry"></i>
+                <span>سُكت بآلة: {{ item.machineName }}</span>
+              </div>
+            </div>
+
+            <div class="integration-info">
+              <h3>{{ item.coinName }}</h3>
+              <p>{{ item.shortDesc }}</p>
+
+              <div class="action-buttons">
+                <button class="view-machine-btn" (click)="onViewMachine(item.machineId)">
+                  <i class="fas fa-cogs"></i> شاهد الآلة التي سكتها
+                </button>
+                <button class="view-process-btn" (click)="onViewProcess(item.id)">
+                  <i class="fas fa-history"></i> مراحل الإنتاج
+                </button>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

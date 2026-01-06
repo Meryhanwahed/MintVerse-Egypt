@@ -1,0 +1,62 @@
+.checkout-wrapper {
+  background: #0a0a0a;
+  color: #fff;
+  min-height: 100vh;
+  padding: 60px 0;
+  direction: rtl;
+}
+
+.checkout-header { text-align: center; margin-bottom: 50px; }
+.checkout-header h1 { font-size: 2.5rem; color: #fff; }
+.gold-divider { width: 100px; height: 3px; background: #d4af37; margin: 15px auto; }
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* الاستمارة */
+.billing-section { background: #111; padding: 30px; border-radius: 20px; border: 1px solid #222; }
+.section-title { display: flex; align-items: center; gap: 10px; margin-bottom: 25px; color: #d4af37; font-size: 1.2rem; }
+
+.input-group { margin-bottom: 20px; display: flex; flex-direction: column; gap: 8px; }
+.input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+input, select, textarea {
+  background: #1a1a1a; border: 1px solid #333; color: #fff; padding: 12px; border-radius: 10px; outline: none;
+}
+
+input:focus { border-color: #d4af37; }
+
+/* طرق الدفع */
+.payment-methods { display: flex; gap: 20px; }
+.method-card {
+  flex: 1; padding: 20px; border: 1px solid #333; border-radius: 12px; text-align: center; cursor: pointer; transition: 0.3s;
+}
+.method-card.active { border-color: #d4af37; background: rgba(212, 175, 55, 0.05); color: #d4af37; }
+
+/* ملخص الطلب */
+.summary-card { background: #1a1a1a; padding: 30px; border-radius: 20px; border: 1px solid #d4af37; position: sticky; top: 20px; }
+.summary-item { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #222; }
+.summary-item img { width: 50px; }
+.item-info h4 { font-size: 1rem; margin: 0; }
+.item-info span { font-size: 0.8rem; color: #777; }
+.item-price { margin-right: auto; color: #d4af37; font-weight: bold; }
+
+.summary-footer .calc-row { display: flex; justify-content: space-between; margin-bottom: 15px; color: #aaa; }
+.calc-row.total { color: #fff; font-size: 1.4rem; font-weight: bold; margin-top: 20px; border-top: 1px solid #333; padding-top: 20px; }
+.gold-text { color: #d4af37; }
+.free-text { color: #2ecc71; }
+
+.place-order-btn {
+  width: 100%; padding: 18px; background: #d4af37; color: #000; border: none; border-radius: 12px; font-weight: bold; font-size: 1.1rem; cursor: pointer; margin-top: 20px;
+}
+.place-order-btn:hover { background: #b8860b; }
+.safe-text { text-align: center; font-size: 0.8rem; color: #555; margin-top: 15px; }
+
+@media (max-width: 992px) {
+  .checkout-grid { grid-template-columns: 1fr; }
+}

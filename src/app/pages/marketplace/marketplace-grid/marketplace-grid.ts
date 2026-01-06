@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule, CurrencyPipe } from '@angular/common'; // استيراد CurrencyPipe
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 @Component({
   selector: 'app-marketplace-grid',
-  imports: [CommonModule, CurrencyPipe],
+  imports: [CommonModule, CurrencyPipe, RouterLink],
   templateUrl: './marketplace-grid.html',
   styleUrl: './marketplace-grid.css',
 })
@@ -16,12 +16,12 @@ export class MarketplaceGrid implements OnInit {
   ngOnInit(): void {
     // هنا ستكون البيانات الحقيقية من API أو Service
     this.coins = [
-      { id: 'coin1', name: 'جنية الملك فؤاد', year: '1922', era: 'العصر الملكي', price: 15000, imageUrl: 'assets/coins/king-fouad.png' },
-      { id: 'coin2', name: '50 قرش فضة - الجمهورية', year: '1970', era: 'الجمهورية القديمة', price: 800, imageUrl: 'assets/coins/50-piaster.png' },
-      { id: 'coin3', name: 'عملة 2 جنيه بوليمر', year: '2022', era: 'إصدارات حديثة', price: 50, imageUrl: 'assets/coins/polymer-2.png' },
-      { id: 'coin4', name: '10 قروش فضة - الملك فاروق', year: '1940', era: 'العصر الملكي', price: 3500, imageUrl: 'assets/coins/king-farouk-silver.png' },
-      { id: 'coin5', name: 'عملة 1 جنيه تذكارية', year: '2010', era: 'إصدارات حديثة', price: 150, imageUrl: 'assets/coins/1-pound-commemorative.png' },
-      { id: 'coin6', name: '5 مليمات نحاس - الملك فؤاد', year: '1927', era: 'العصر الملكي', price: 450, imageUrl: 'assets/coins/5-milliemes.png' },
+      { id: 'coin1', name: 'جنية الملك فؤاد', year: '1922', era: 'العصر الملكي', price: 15000, imageUrl: 'assets/museum/1.png' },
+      { id: 'coin2', name: '50 قرش فضة - الجمهورية', year: '1970', era: 'الجمهورية القديمة', price: 800, imageUrl: 'assets/museum/2.png' },
+      { id: 'coin3', name: 'عملة 2 جنيه بوليمر', year: '2022', era: 'إصدارات حديثة', price: 50, imageUrl: 'assets/museum/3.png' },
+      { id: 'coin4', name: '10 قروش فضة - الملك فاروق', year: '1940', era: 'العصر الملكي', price: 3500, imageUrl: 'assets/museum/4.png' },
+      { id: 'coin5', name: 'عملة 1 جنيه تذكارية', year: '2010', era: 'إصدارات حديثة', price: 150, imageUrl: 'assets/museum/5.png' },
+      { id: 'coin6', name: '5 مليمات نحاس - الملك فؤاد', year: '1927', era: 'العصر الملكي', price: 450, imageUrl: 'assets/museum/6.png' },
     ];
   }
 

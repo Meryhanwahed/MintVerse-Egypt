@@ -1,0 +1,113 @@
+.filter-section {
+  padding: 40px 0;
+  background: #0f0f0f;
+  border-bottom: 1px solid #222;
+  direction: rtl;
+}
+
+.filter-header {
+  color: #d4af37;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.filters-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.filter-group h4 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+.coin-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* تصميم الزر على شكل عملة */
+.coin-btn {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #1a1a1a;
+  border: 2px inset #333;
+  color: #888;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.btn-text {
+  position: relative;
+  z-index: 2;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* تأثير اللمعان المتحرك */
+.coin-shine {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+
+/* الحالة النشطة (العملة الذهبية) */
+.coin-btn.active {
+  background: radial-gradient(circle, #d4af37, #b8860b);
+  border: 2px solid #fff;
+  color: #1a1a1a;
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+}
+
+.coin-btn.active .coin-shine {
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  0% { transform: translate(-100%, -100%) rotate(45deg); }
+  100% { transform: translate(100%, 100%) rotate(45deg); }
+}
+
+.coin-btn:hover:not(.active) {
+  border-color: #d4af37;
+  color: #d4af37;
+  transform: translateY(-5px);
+}
+
+/* تخصيص فلاتر المعادن */
+.metal-btn {
+  width: 75px;
+  height: 75px;
+}
+
+@media (max-width: 768px) {
+  .coin-buttons { justify-content: center; }
+  .coin-btn { width: 70px; height: 70px; }
+  .btn-text { font-size: 0.75rem; }
+}

@@ -20,7 +20,7 @@
 
           <div class="price-action">
             <span class="price">{{ coin.price | currency:'EGP ':'symbol':'1.0-0' }}</span>
-            <button class="add-to-cart-btn" (click)="addToCart(coin.id)">
+            <button class="add-to-cart-btn"  routerLink="/checkout">
               <i class="fas fa-shopping-basket"></i>
               أضف للسلة
             </button>

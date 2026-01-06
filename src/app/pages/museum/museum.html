@@ -1,0 +1,28 @@
+<div class="museum-page-wrapper">
+
+  <app-hero></app-hero>
+
+  <main class="museum-main-content">
+
+    <app-coinfilter (filterChanged)="onFilterChange($event)"></app-coinfilter>
+
+    <app-coinlist
+      [activeFilters]="currentFilters"
+      (coinSelected)="openCoinDetails($event)">
+    </app-coinlist>
+
+  </main>
+
+  @if (selectedCoin) {
+    <div class="details-overlay" (click)="closeDetails()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <button class="close-modal" (click)="closeDetails()">&times;</button>
+        <app-coindetails [coinData]="selectedCoin"></app-coindetails>
+      </div>
+    </div>
+  }
+
+  <app-interactive-timeline></app-interactive-timeline>
+
+  
+</div>
