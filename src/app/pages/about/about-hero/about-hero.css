@@ -9,12 +9,7 @@
   overflow: hidden;
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to left, rgba(62, 59, 41, 0.9) 40%, rgba(175, 176, 152, 0.5) 100%);
-  z-index: 1;
-}
+
 
 .about-content {
   position: relative;
@@ -23,6 +18,7 @@
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
+
   justify-content: space-between;
   align-items: center;
 }
@@ -41,14 +37,14 @@
 
 .fade-in-title {
   font-size: 4rem;
-  color: #fff;
+  color: #d4af37;
   line-height: 1.1;
   font-weight: 900;
   margin-bottom: 25px;
 }
 
 .gold-gradient {
-  background: linear-gradient(45deg, #d4af37, #f3e5ab, #b8860b);
+  background: linear-gradient(45deg, #d4af37, #ecd26b, #b8860b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

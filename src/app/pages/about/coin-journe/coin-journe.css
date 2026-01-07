@@ -1,6 +1,7 @@
 .journey-section {
   padding: 100px 0;
-  background: #fdfdfd;
+  /* خلفية فاتحة جداً مريحة للعين */
+  background: #f9fbfd;
   direction: rtl;
   overflow: hidden;
 }
@@ -10,10 +11,32 @@
   margin-bottom: 80px;
 }
 
-.royal-tag { color: #d4af37; font-weight: bold; font-size: 0.9rem; }
-.journey-header h2 { font-size: 3rem; margin-top: 10px; color: #1a1a1a; }
-.gold-text { color: #d4af37; }
-.header-line { width: 80px; height: 4px; background: #d4af37; margin: 20px auto; }
+.royal-tag {
+  color: #b8860b; /* ذهبي داكن قليلاً للنصوص الصغيرة */
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.journey-header h2 {
+  font-size: 3rem;
+  margin-top: 10px;
+  color: #444; /* رمادي دافئ بدلاً من الأسود */
+}
+
+.gold-text {
+  background: linear-gradient(45deg, #d4af37, #fdf5e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.header-line {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  margin: 20px auto;
+}
 
 /* التايم لاين */
 .timeline {
@@ -22,11 +45,11 @@
   margin: 0 auto;
 }
 
-/* الخط الذهبي في المنتصف */
+/* الخط في المنتصف - ذهبي وفضي */
 .main-line {
   position: absolute;
-  width: 4px;
-  background: linear-gradient(to bottom, #d4af37 0%, #1a1a1a 100%);
+  width: 2px;
+  background: linear-gradient(to bottom, #d4af37 0%, #e0e0e0 50%, #d4af37 100%);
   top: 0; bottom: 0; left: 50%;
   transform: translateX(-50%);
 }
@@ -36,83 +59,86 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
   position: relative;
 }
 
-/* الدائرة في المنتصف */
+/* الدائرة المختومة */
 .timeline-item::after {
   content: '';
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   background: #fff;
-  border: 4px solid #d4af37;
+  border: 3px solid #d4af37;
   border-radius: 50%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
 }
 
 .content-box {
-  width: 45%;
-  padding: 30px;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  transition: 0.4s;
-  border: 1px solid #eee;
+  width: 42%;
+  padding: 35px;
+  background: #ffffff;
+  border-radius: 25px;
+  /* ظل ناعم جداً وفضي */
+  box-shadow: 0 15px 40px rgba(180, 180, 180, 0.15);
+  transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid #f0f0f0;
 }
 
 .coin-visual {
   width: 45%;
   display: flex;
   justify-content: center;
-  transition: 0.5s;
+  transition: 0.6s ease;
 }
 
 .coin-visual img {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   object-fit: contain;
-  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+  /* ظل ذهبي خفيف للعملات */
+  filter: drop-shadow(0 15px 25px rgba(212, 175, 55, 0.2));
 }
-
-/* اتجاهات العناصر */
-.timeline-item.left { flex-direction: row; }
-.timeline-item.right { flex-direction: row-reverse; }
 
 .year-label {
-  background: #1a1a1a;
-  color: #d4af37;
+  /* استبدال الخلفية السوداء بذهبي فاتح جداً */
+  background: rgba(212, 175, 55, 0.1);
+  color: #b8860b;
   display: inline-block;
-  padding: 5px 15px;
-  border-radius: 50px;
-  font-weight: bold;
-  font-size: 0.8rem;
-  margin-bottom: 15px;
+  padding: 6px 18px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
-.content-box h3 { font-size: 1.6rem; margin-bottom: 15px; color: #1a1a1a; }
-.content-box p { color: #666; line-height: 1.7; }
+.content-box h3 { font-size: 1.7rem; margin-bottom: 15px; color: #333; }
+.content-box p { color: #777; line-height: 1.8; font-size: 1rem; }
 
-/* تأثيرات الـ Hover */
+/* تأثيرات الـ Hover الملكية الجديدة */
 .timeline-item:hover .content-box {
-  background: #1a1a1a;
+  transform: translateY(-10px);
   border-color: #d4af37;
+  background: #fff; /* تظل الخلفية فاتحة */
+  box-shadow: 0 25px 50px rgba(212, 175, 55, 0.15);
 }
-.timeline-item:hover .content-box h3,
-.timeline-item:hover .content-box p { color: #fff; }
+
+.timeline-item:hover .content-box h3 { color: #d4af37; }
 
 .timeline-item:hover .coin-visual {
-  transform: scale(1.2) rotate(15deg);
+  transform: scale(1.15) rotate(-5deg);
 }
 
 /* الموبايل */
 @media (max-width: 768px) {
-  .main-line { left: 5%; }
-  .timeline-item::after { left: 5%; }
+  .main-line { left: 90%; }
+  .timeline-item::after { left: 90%; }
   .timeline-item, .timeline-item.right { flex-direction: column; align-items: flex-start; }
-  .content-box, .coin-visual { width: 85%; margin-right: 15%; }
-  .coin-visual { margin-top: 20px; justify-content: flex-start; }
+  .content-box, .coin-visual { width: 85%; margin: 0 auto 20px; }
+  .coin-visual img { width: 150px; height: 150px; }
 }

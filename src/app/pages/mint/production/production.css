@@ -1,7 +1,8 @@
 .mint-steps-section {
   padding: 100px 0;
-  background: #0f0f0f;
-  color: #fff;
+  /* خلفية فاتحة ملكية */
+  background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+  color: #333; /* خط داكن بدلاً من الأبيض */
   direction: rtl;
   overflow: hidden;
 }
@@ -12,7 +13,7 @@
 }
 
 .step-tag {
-  color: #d4af37;
+  color: #b8860b; /* ذهبي أغمق قليلاً للوضوح على الخلفية الفاتحة */
   font-weight: bold;
   letter-spacing: 2px;
   display: block;
@@ -21,6 +22,7 @@
 
 .section-header h2 {
   font-size: 2.5rem;
+  color: #2c3e50; /* لون سيلفر داكن */
 }
 
 /* الشغل الأساسي للـ Stepper */
@@ -36,7 +38,8 @@
   bottom: 0;
   left: 50%;
   width: 2px;
-  background: linear-gradient(to bottom, #d4af37 0%, #222 100%);
+  /* خط ذهبي يتدرج إلى الفضي */
+  background: linear-gradient(to bottom, #d4af37 0%, #bdc3c7 100%);
   transform: translateX(-50%);
 }
 
@@ -45,11 +48,11 @@
   margin-bottom: 100px;
   width: 100%;
   display: flex;
-  justify-content: flex-start; /* ترتيب العناصر لليمين */
+  justify-content: flex-start;
 }
 
 .step-item.reverse {
-  justify-content: flex-end; /* ترتيب العناصر لليسار للمرحلة الثانية */
+  justify-content: flex-end;
 }
 
 /* أيقونة النقطة على الخط */
@@ -60,7 +63,7 @@
   transform: translateX(-50%);
   width: 50px;
   height: 50px;
-  background: #1a1a1a;
+  background: #ffffff; /* خلفية بيضاء نقية */
   border: 2px solid #d4af37;
   border-radius: 50%;
   display: flex;
@@ -68,27 +71,32 @@
   justify-content: center;
   z-index: 10;
   color: #d4af37;
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  /* ظل فضي ناعم */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05), 0 0 10px rgba(212, 175, 55, 0.2);
 }
 
 /* كارت المرحلة */
 .step-card {
   width: 45%;
-  background: #161616;
+  background: rgba(255, 255, 255, 0.8); /* أبيض زجاجي */
+  backdrop-filter: blur(10px);
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid #222;
+  border: 1px solid #e0e0e0; /* حدود سيلفر خفيفة */
   transition: 0.4s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); /* ظل خفيف جداً */
 }
 
 .step-card:hover {
   border-color: #d4af37;
   transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
 }
 
 .step-image {
   height: 200px;
   overflow: hidden;
+  background: #f0f0f0;
 }
 
 .step-image img {
@@ -96,12 +104,11 @@
   height: 100%;
   object-fit: cover;
   transition: 0.5s;
-  opacity: 0.7;
+  opacity: 0.9; /* زيادة الوضوح لأن الخلفية فاتحة */
 }
 
 .step-card:hover img {
   transform: scale(1.1);
-  opacity: 1;
 }
 
 .step-content {
@@ -109,13 +116,13 @@
 }
 
 .step-content h3 {
-  color: #d4af37;
+  color: #b8860b;
   margin-bottom: 15px;
   font-size: 1.4rem;
 }
 
 .step-content p {
-  color: #aaa;
+  color: #555; /* رمادي داكن للقراءة */
   line-height: 1.8;
   font-size: 0.95rem;
 }
@@ -124,11 +131,11 @@
   display: inline-block;
   margin-top: 20px;
   padding: 5px 15px;
-  background: rgba(212, 175, 55, 0.1);
-  color: #d4af37;
+  background: rgba(212, 175, 55, 0.05);
+  color: #b8860b;
   border-radius: 50px;
   font-size: 0.75rem;
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  border: 1px solid rgba(212, 175, 55, 0.1);
 }
 
 /* تحسينات الموبايل */

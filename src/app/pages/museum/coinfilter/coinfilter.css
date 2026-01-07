@@ -1,12 +1,14 @@
 .filter-section {
   padding: 40px 0;
-  background: #0f0f0f;
-  border-bottom: 1px solid #222;
+  /* خلفية فاتحة جداً مائلة للبيج الملكي */
+  background: #fdfbf7;
+  border-bottom: 1px solid #e0d5c1;
   direction: rtl;
 }
 
 .filter-header {
-  color: #d4af37;
+  /* ذهبي غامق قليلاً ليظهر فوق الخلفية الفاتحة */
+  color: #b8860b;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -21,10 +23,11 @@
 }
 
 .filter-group h4 {
-  color: #fff;
+  /* رمادي دافئ بدلاً من الأبيض */
+  color: #5d5a52;
   margin-bottom: 20px;
   font-size: 1.1rem;
-  opacity: 0.8;
+  font-weight: 600;
 }
 
 .coin-buttons {
@@ -33,22 +36,24 @@
   gap: 20px;
 }
 
-/* تصميم الزر على شكل عملة */
+/* تصميم الزر على شكل عملة فضية هادئة */
 .coin-btn {
   position: relative;
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  background: #1a1a1a;
-  border: 2px inset #333;
-  color: #888;
+  /* تدرج فضي فاتح */
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  border: 1px solid #d1d1d1;
+  color: #777;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  /* ظل ناعم فاتح */
+  box-shadow: 5px 5px 15px #d1d1d1, -5px -5px 15px #ffffff;
 }
 
 .btn-text {
@@ -59,7 +64,7 @@
   text-align: center;
 }
 
-/* تأثير اللمعان المتحرك */
+/* تأثير اللمعان (أبيض ناصع) */
 .coin-shine {
   position: absolute;
   top: -50%;
@@ -69,20 +74,21 @@
   background: linear-gradient(
     45deg,
     transparent,
-    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.6),
     transparent
   );
   transform: rotate(45deg);
   transition: 0.5s;
 }
 
-/* الحالة النشطة (العملة الذهبية) */
+/* الحالة النشطة (عملة ذهبية مشرقة) */
 .coin-btn.active {
-  background: radial-gradient(circle, #d4af37, #b8860b);
+  /* تدرج ذهبي ملكي فاتح */
+  background: radial-gradient(circle, #f9e29a, #d4af37);
   border: 2px solid #fff;
-  color: #1a1a1a;
+  color: #5c430a; /* بني غامق للنص ليكون مقروءاً */
   transform: scale(1.1) rotate(5deg);
-  box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
 }
 
 .coin-btn.active .coin-shine {
@@ -95,8 +101,10 @@
 }
 
 .coin-btn:hover:not(.active) {
+  /* تحول للفضي اللامع عند الهوفر */
   border-color: #d4af37;
-  color: #d4af37;
+  color: #b8860b;
+  background: #fff;
   transform: translateY(-5px);
 }
 

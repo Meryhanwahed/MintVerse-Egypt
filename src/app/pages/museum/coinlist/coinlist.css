@@ -1,6 +1,7 @@
 .grand-grid-container {
   padding: 40px;
-  background: #0a0a0a;
+  /* خلفية فاتحة جداً مريحة للعين */
+  background: #fdfbf7;
   direction: rtl;
 }
 
@@ -12,20 +13,23 @@
   margin: 0 auto;
 }
 
-/* بطاقة العملة */
+/* بطاقة العملة - ستايل المرمر */
 .coin-card {
-  background: #fff;
+  background: #ffffff;
   border-radius: 24px;
   overflow: hidden;
-  border: 1px solid #222;
+  /* حدود ذهبية خفيفة جداً */
+  border: 1px solid #eaddca;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.05);
 }
 
-/* منطقة العرض (Spotlight Effect) */
+/* منطقة العرض - ستايل ناصع وبسيط */
 .coin-display {
   height: 300px;
-  background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+  /* تدرج فضي ناعم خلف العملة */
+  background: radial-gradient(circle at center, #ffffff 0%, #f4f4f4 100%);
   position: relative;
   display: flex;
   align-items: center;
@@ -37,9 +41,10 @@
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  width: 150px; height: 150px;
-  background: rgba(212, 175, 55, 0.15);
-  filter: blur(40px);
+  width: 180px; height: 180px;
+  /* توهج ذهبي ناعم */
+  background: rgba(212, 175, 55, 0.1);
+  filter: blur(50px);
   border-radius: 50%;
   z-index: 1;
   transition: 0.5s;
@@ -48,15 +53,17 @@
 .coin-img {
   width: 75%;
   z-index: 2;
-  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.8));
+  /* ظل ناعم بدلاً من الظل الأسود القوي */
+  filter: drop-shadow(0 15px 25px rgba(184, 134, 11, 0.2));
   transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* تفاصيل تظهر عند Hover */
+/* تفاصيل تظهر عند Hover - ستايل زجاجي فاتح (Frosted Glass) */
 .hover-details {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.8);
+  /* خلفية بيضاء شفافة مع Blur */
+  background: rgba(255, 255, 255, 0.85);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,57 +72,77 @@
   opacity: 0;
   z-index: 3;
   transition: 0.4s;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(8px);
 }
 
 .mint-year {
-  color: #d4af37;
+  color: #b8860b; /* ذهبي داكن للقراءة */
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
 }
 
 .explore-btn {
-  padding: 10px 20px;
-  border: 1px solid #d4af37;
-  background: transparent;
-  color: #fff;
+  padding: 12px 25px;
+  /* زر بحدود ذهبية وفضية */
+  border: 2px solid #d4af37;
+  background: #ffffff;
+  color: #b8860b;
+  font-weight: bold;
   border-radius: 50px;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.explore-btn:hover { background: #d4af37; color: #000; }
+.explore-btn:hover {
+  background: #d4af37;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
 
-/* تأثيرات الـ Hover على البطاقة بالكامل */
+/* تأثيرات الـ Hover */
 .coin-card:hover {
-  transform: translateY(-15px);
+  transform: translateY(-12px);
   border-color: #d4af37;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  /* ظل ذهبي دافئ */
+  box-shadow: 0 25px 50px rgba(212, 175, 55, 0.15);
 }
 
 .coin-card:hover .hover-details { opacity: 1; }
-.coin-card:hover .coin-img { transform: scale(1.1) rotate(5deg); }
-.coin-card:hover .spotlight { width: 220px; height: 220px; background: rgba(212, 175, 55, 0.25); }
+.coin-card:hover .coin-img { transform: scale(1.1) rotate(3deg); }
+.coin-card:hover .spotlight { width: 250px; height: 250px; background: rgba(212, 175, 55, 0.2); }
 
 /* بيانات العملة */
 .coin-info {
   padding: 25px;
   text-align: right;
+  background: #ffffff;
 }
 
 .coin-name {
-  color: #000;
+  color: #4a4a4a; /* رمادي داكن مريح بدل الأسود */
   font-size: 1.3rem;
   margin-bottom: 12px;
   font-weight: 700;
+  font-family: 'Amiri', serif; /* إذا كان متاحاً يعطي طابعاً ملكياً */
 }
 
 .coin-meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.9rem;
-  color: #888;
+  font-size: 0.95rem;
+  color: #8e8e8e;
 }
 
-.coin-material i { font-size: 0.6rem; vertical-align: middle; }
+.coin-material {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #b8860b; /* تمييز المعدن بالذهبي */
+}
+
+.coin-material i {
+    font-size: 0.7rem;
+    color: #d4af37;
+}

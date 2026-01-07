@@ -1,6 +1,7 @@
 .map-section {
   padding: 80px 0;
-  background: #f9f9f9;
+  /* خلفية رمادية فاتحة جداً مائلة للؤلؤي */
+  background: linear-gradient(135deg, #ffffff 0%, #f4f4f4 100%);
   direction: rtl;
 }
 
@@ -12,14 +13,27 @@
 
 .address-card {
   flex: 1;
-  background: #1a1a1a;
-  color: #fff;
+  /* خلفية بيضاء نقية مع حدود فضية ناعمة */
+  background: #ffffff;
+  color: #444; /* نصوص رمادية داكنة مريحة للعين */
   padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  border-radius: 25px;
+  /* ظل ناعم وفاتح بدلاً من الظلال الغامقة */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  border: 1px solid #e0e0e0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* إضافة لمسة سيلفر (فضية) أعلى الكارت */
+.address-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 5px;
+  background: linear-gradient(90deg, #d4af37, #e0e0e0, #d4af37);
 }
 
 .card-header {
@@ -29,54 +43,68 @@
   margin-bottom: 30px;
 }
 
+.card-header h2 {
+  color: #2c3e50;
+  font-weight: 800;
+}
+
 .gold-icon {
-  font-size: 2rem;
-  color: #d4af37;
+  font-size: 2.2rem;
+  /* تدرج ذهبي للأيقونة */
+  background: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .address-details p {
   margin-bottom: 15px;
   line-height: 1.8;
-  color: #ccc;
+  color: #666; /* لون رمادي متوسط للوصف */
   font-size: 1.1rem;
 }
 
 .address-details strong {
-  color: #d4af37;
+  color: #b38728; /* ذهبي داكن قليلاً ليظهر فوق الأبيض */
 }
 
 .btn-directions {
   margin-top: 30px;
   display: inline-block;
-  padding: 12px 25px;
-  background: #d4af37;
-  color: #1a1a1a;
+  padding: 15px 30px;
+  /* زر ذهبي فخم */
+  background: linear-gradient(45deg, #d4af37, #f2d06b);
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 10px;
-  transition: 0.3s;
+  border-radius: 12px;
+  transition: 0.4s;
   text-align: center;
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+  border: none;
 }
 
 .btn-directions:hover {
-  background: #fff;
-  transform: translateY(-3px);
+  background: linear-gradient(45deg, #b38728, #d4af37);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(212, 175, 55, 0.3);
+  color: #fff;
 }
 
 .map-container {
   flex: 2;
-  border-radius: 20px;
+  border-radius: 25px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  border: 4px solid #fff;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  /* إطار فضي (Silver) للملف */
+  border: 8px solid #ffffff;
 }
 
-/* التجاوب */
+/* تأثير للتجاوب */
 @media (max-width: 992px) {
   .map-wrapper {
     flex-direction: column;
   }
   .map-container {
-    height: 350px;
+    height: 400px;
   }
 }

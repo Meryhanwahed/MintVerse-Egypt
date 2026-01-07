@@ -5,25 +5,26 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: #0a0a0a;
-  color: #fff;
+  background: #fdfdfd; /* خلفية بيضاء عاجية */
+  color: #444; /* لون نص رمادي داكن للقراءة */
   direction: rtl;
 }
 
-/* الخلفية مع تأثير تعتيم */
+/* الخلفية مع تأثير ناعم جداً */
 .hero-bg-image {
   position: absolute;
   inset: 0;
   background: url('/assets/mint-bg.jpeg') center/cover no-repeat;
-  filter: grayscale(100%) contrast(1.2);
+  filter: grayscale(100%) brightness(1.2) contrast(0.8); /* تفتيح الصورة جداً */
   z-index: 1;
-  opacity: 0.4;
+  opacity: 0.15; /* تقليل الشفافية لتكون مجرد ظل في الخلفية */
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, #4342428f 20%, rgba(10, 10, 10, 0.7) 50%, transparent 100%);
+  /* تدرج من الأبيض الشفاف إلى الأبيض الصريح */
+  background: linear-gradient(90deg, #ffffff 30%, rgba(255, 255, 255, 0.8) 60%, transparent 100%);
   z-index: 2;
 }
 
@@ -35,26 +36,27 @@
 
 .identity-content { position: relative; max-width: 800px; }
 
-/* النص المائي الخلفي */
+/* النص المائي الخلفي باللون السيلفر */
 .watermark-text {
   position: absolute;
   top: -50px;
   right: -20px;
   font-size: 10rem;
   font-weight: 900;
-  color: rgba(212, 175, 55, 0.03);
+  color: rgba(192, 192, 192, 0.1); /* لون سيلفر خفيف جداً */
   letter-spacing: 15px;
   z-index: -1;
   pointer-events: none;
 }
 
 .sub-title {
-  color: #d4af37;
+  color: #b8860b; /* جولد داكن قليلاً للوضوح على الخلفية الفاتحة */
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 0.9rem;
   display: block;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .main-title {
@@ -62,30 +64,35 @@
   line-height: 1.2;
   font-weight: 800;
   margin-bottom: 30px;
+  color: #2c3e50; /* لون أزرق رمادي فخم للنص الأساسي */
 }
 
 .gold-gradient {
-  background: linear-gradient(45deg, #d4af37, #fdf5e6, #b8860b);
+  /* تدرج ذهبي ملكي واضح */
+  background: linear-gradient(45deg, #d4af37, #b8860b, #daa520);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: 900;
 }
 
 .description-box {
-  background: rgba(255, 255, 255, 0.03);
+  /* تأثير الزجاج الفاتح (Frosted Glass) */
+  background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
   padding: 30px;
   border-right: 4px solid #d4af37;
   border-radius: 0 15px 15px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* ظل ناعم جداً */
 }
 
 .description-box p {
   font-size: 1.15rem;
   line-height: 1.8;
-  color: #ccc;
+  color: #555; /* رمادي متوسط */
   margin-bottom: 25px;
 }
 
-/* إحصائيات سريعة */
+/* إحصائيات سريعة باللون السيلفر والجولد */
 .stats-mini {
   display: flex;
   gap: 40px;
@@ -94,29 +101,30 @@
 
 .stat-num {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: #d4af37;
+  color: #d4af37; /* رقم ذهبي */
 }
 
 .stat-label {
-  font-size: 0.8rem;
-  color: #888;
+  font-size: 0.85rem;
+  color: #888; /* سيلفر مطفي */
+  font-weight: 500;
 }
 
 .stat-sep {
   width: 1px;
-  height: 30px;
-  background: #333;
+  height: 35px;
+  background: #e0e0e0; /* فواصل سيلفر فاتحة */
 }
 
-/* ترس دوار للزينة */
+/* ترس دوار للزينة باللون السيلفر */
 .gear-decoration {
   position: absolute;
   bottom: -50px;
   left: -50px;
   font-size: 15rem;
-  color: rgba(255, 255, 255, 0.02);
+  color: rgba(212, 175, 55, 0.05); /* ظل ذهبي خفيف */
   animation: rotateGear 20s linear infinite;
 }
 
@@ -127,5 +135,8 @@
 
 @media (max-width: 768px) {
   .main-title { font-size: 2.2rem; }
-  .description-box { padding: 20px; }
+  .description-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+  }
 }

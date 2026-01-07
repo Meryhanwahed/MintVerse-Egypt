@@ -1,73 +1,92 @@
 .form-section {
   padding: 100px 0;
-  background: #fdfdfd;
+  /* خلفية فاتحة جداً مائلة للكريمي */
+  background: #fdfbf7;
   direction: rtl;
 }
 
 .form-wrapper {
   display: flex;
-  background: #fff;
+  background: #ffffff;
   border-radius: 30px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  /* ظل ناعم جداً ذهبي خفيف */
+  box-shadow: 0 20px 60px rgba(212, 175, 55, 0.08);
   min-height: 600px;
+  border: 1px solid #f1ece1;
 }
 
-/* الجانب النصي */
+/* الجانب النصي - تم تحويله من الأسود للأبيض والسيلفر */
 .form-info-side {
   flex: 1;
-  background: #1a1a1a;
-  color: #fff;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); /* سيلفر ناعم */
+  color: #444; /* رمادي متوسط للنصوص */
   padding: 60px;
   display: flex;
   align-items: center;
   position: relative;
+  border-left: 1px solid #eee;
 }
 
 .form-info-side::before {
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: url('/assets/contact-bg.png');
-  opacity: 0.1;
+  background: url('/assets/contact-bg.png'); /* يفضل صورة بنمط رخامي أو زخارف فاتحة */
+  opacity: 0.05;
 }
 
-.gold-label { color: #d4af37; font-weight: bold; font-size: 0.9rem; margin-bottom: 15px; display: block; }
-.form-info-side h2 { font-size: 2.5rem; margin-bottom: 25px; }
-.gold-text { color: #d4af37; }
-.form-info-side p { color: #aaa; line-height: 1.8; margin-bottom: 30px; }
+.gold-label {
+  color: #b8860b; /* ذهبي عميق وواضح على الخلفية الفاتحة */
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  display: block;
+  letter-spacing: 1px;
+}
+
+.form-info-side h2 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #2c3e50; /* لون كحلي مطفي جداً أو رمادي غامق بدل الأسود */
+}
+
+.gold-text {
+  color: #d4af37;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+
+.form-info-side p {
+  color: #7f8c8d; /* رمادي سيلفر للنصوص الجانبية */
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
 
 .form-check-list { list-style: none; padding: 0; }
-.form-check-list li { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; color: #ddd; }
-.form-check-list i { color: #d4af37; }
+.form-check-list li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* أيقونات ذهبية */
+.form-check-list i {
+  color: #d4af37;
+  filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.2));
+}
 
 /* الجانب الخاص بالنموذج */
 .form-card-side {
   flex: 1.5;
   padding: 60px;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-.input-row {
-  display: flex;
-  gap: 20px;
-}
-
-.input-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex: 1;
+  background: #fff;
 }
 
 .input-group label {
   font-weight: bold;
-  color: #1a1a1a;
+  color: #5d5d5d; /* رمادي دافئ */
   font-size: 0.9rem;
 }
 
@@ -75,11 +94,12 @@
 .input-group select,
 .input-group textarea {
   padding: 15px;
-  border: 1px solid #eee;
+  border: 1px solid #e0e0e0;
   border-radius: 12px;
-  background: #f9f9f9;
+  background: #fcfcfc;
   font-family: inherit;
   transition: 0.3s;
+  color: #444;
 }
 
 .input-group input:focus,
@@ -88,13 +108,15 @@
   outline: none;
   border-color: #d4af37;
   background: #fff;
-  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.1);
+  /* توهج ذهبي خفيف */
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.15);
 }
 
+/* زر الإرسال - تم تحويله لستايل ذهبي فخم */
 .submit-btn {
-  background: #1a1a1a;
-  color: #d4af37;
-  border: 1px solid #d4af37;
+  background: linear-gradient(45deg, #d4af37, #f1d592); /* تدرج ذهبي */
+  color: #fff;
+  border: none;
   padding: 18px;
   border-radius: 12px;
   font-size: 1.1rem;
@@ -106,17 +128,24 @@
   gap: 15px;
   transition: 0.4s;
   margin-top: 10px;
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 
 .submit-btn:hover {
-  background: #d4af37;
-  color: #1a1a1a;
+  background: linear-gradient(45deg, #b8860b, #d4af37);
   transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
+}
+
+.submit-btn i {
+  color: #fff;
 }
 
 /* التجاوب */
 @media (max-width: 992px) {
   .form-wrapper { flex-direction: column; }
   .input-row { flex-direction: column; }
+  .form-info-side { border-left: none; border-bottom: 1px solid #eee; }
   .form-info-side, .form-card-side { padding: 40px; }
 }

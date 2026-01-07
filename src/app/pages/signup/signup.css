@@ -1,8 +1,9 @@
 .signup-page {
   height: 100vh;
   display: flex;
-  background: #f8f9fa;
+  background: #ffffff; /* خلفية بيضاء صافية */
   direction: rtl;
+  font-family: 'Amiri', serif; /* اختيار خط كلاسيكي فخم إذا توفر */
 }
 
 .signup-container {
@@ -11,106 +12,141 @@
   height: 100%;
 }
 
-/* الجانب المعلوماتي */
+/* الجانب المعلوماتي - خلفية فاتحة وفخمة */
 .info-side {
   flex: 0.8;
-  background: url('https://images.unsplash.com/photo-1589510153247-42929b7b5943?q=80&w=2000') center/cover;
+  background: url('https://images.unsplash.com/photo-1614850715649-1d0106293bd1?q=80&w=2000') center/cover;
   position: relative;
   display: flex;
   align-items: center;
   padding: 80px;
-  color: #fff;
+  color: #444; /* نصوص داكنة قليلاً لتكون واضحة على الفاتح */
 }
 
+/* طبقة شفافة فاتحة بتأثير زجاجي */
 .info-side .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(45deg, rgba(26, 26, 26, 0.95), rgba(26, 26, 26, 0.7));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(245, 245, 245, 0.7));
+  backdrop-filter: blur(5px);
 }
 
 .content-wrapper { position: relative; z-index: 2; }
 
 .badge {
-  background: #d4af37;
-  color: #1a1a1a;
+  background: linear-gradient(45deg, #d4af37, #fdf5e6); /* تدرج ذهبي فاتح */
+  color: #5d4d1a;
   padding: 6px 15px;
   border-radius: 50px;
   font-weight: bold;
   font-size: 0.8rem;
   margin-bottom: 20px;
   display: inline-block;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
 }
 
-.content-wrapper h1 { font-size: 3rem; margin-bottom: 20px; line-height: 1.2; }
-.gold-text { color: #d4af37; }
-.content-wrapper p { color: #ccc; font-size: 1.1rem; line-height: 1.8; margin-bottom: 40px; }
+.content-wrapper h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  color: #2c3e50; /* لون سلفر داكن/نيلي خفيف */
+}
 
-.feature-item { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; font-weight: 600; }
-.feature-item i { color: #d4af37; font-size: 1.2rem; }
+/* تدرج ذهبي للنص */
+.gold-text {
+  background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.content-wrapper p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* أيقونات سلفر وذهبية */
+.feature-item i {
+  color: #c0c0c0; /* لون سلفر */
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
 
 /* الجانب الخاص بالنموذج */
 .form-side {
   flex: 1.2;
-  background: #fff;
+  background: #fdfdfd;
   display: flex;
   justify-content: center;
   padding: 40px;
   overflow-y: auto;
+  border-right: 1px solid #f1f1f1;
 }
 
 .form-scroll { width: 100%; max-width: 550px; }
 
 .logo-box { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
 .gold-icon { font-size: 1.8rem; color: #d4af37; }
-.logo-box h3 { font-size: 1.4rem; color: #1a1a1a; margin: 0; }
+.logo-box h3 { font-size: 1.4rem; color: #333; margin: 0; letter-spacing: 1px; }
 
-.header-text h2 { font-size: 2rem; color: #1a1a1a; margin-bottom: 10px; }
-.header-text p { color: #777; margin-bottom: 30px; }
+.header-text h2 { font-size: 2rem; color: #333; margin-bottom: 10px; }
+.header-text p { color: #888; margin-bottom: 30px; }
 
-.signup-form { display: flex; flex-direction: column; gap: 20px; }
-
-.input-row { display: flex; gap: 15px; }
-
-.input-group { flex: 1; display: flex; flex-direction: column; gap: 8px; }
-.input-group label { font-weight: 600; font-size: 0.9rem; color: #333; }
+/* مدخلات البيانات بستايل سلفر نظيف */
+.input-group label { font-weight: 600; font-size: 0.9rem; color: #555; }
 .input-group input {
   padding: 14px;
-  border: 1px solid #eee;
+  border: 1.5px solid #e8e8e8; /* حدود سلفر فاتحة */
   border-radius: 12px;
-  background: #fbfbfb;
+  background: #fff;
   transition: 0.3s;
+  color: #333;
 }
 
 .input-group input:focus {
   outline: none;
-  border-color: #d4af37;
-  background: #fff;
-  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+  border-color: #d4af37; /* تتحول للذهبي عند الكتابة */
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.1);
 }
 
-.terms-check { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: #666; }
-.terms-check a { color: #d4af37; text-decoration: none; font-weight: bold; }
-
+/* زر التسجيل الذهبي الفاخر */
 .signup-btn {
-  background: #1a1a1a;
-  color: #d4af37;
-  border: 1px solid #d4af37;
+  background: linear-gradient(45deg, #d4af37, #f9f295, #b8860b);
+  background-size: 200% auto;
+  color: #4a3b08;
+  border: none;
   padding: 16px;
   border-radius: 12px;
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.5s;
   margin-top: 10px;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
-.signup-btn:hover { background: #d4af37; color: #1a1a1a; transform: translateY(-3px); }
+.signup-btn:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
 
-.login-prompt { text-align: center; margin-top: 25px; color: #777; font-size: 0.9rem; }
-.login-prompt a { color: #d4af37; text-decoration: none; font-weight: bold; }
+.login-prompt a { color: #b8860b; text-decoration: none; font-weight: bold; border-bottom: 1px solid transparent; transition: 0.3s; }
+.login-prompt a:hover { border-bottom-color: #b8860b; }
 
 /* التجاوب */
 @media (max-width: 1024px) {
   .info-side { display: none; }
-  .form-side { padding: 40px 20px; }
+  .form-side { background: #fff; padding: 40px 20px; }
 }

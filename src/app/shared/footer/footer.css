@@ -1,9 +1,12 @@
 .site-footer {
-  background-color: #1a1a1a;
-  color: #e0e0e0;
+  /* خلفية عاجية فاتحة جداً توحي بالرخام أو الورق الفاخر */
+  background-color: #fcfbf7;
+  color: #4a4a4a;
   direction: rtl;
   padding-top: 60px;
+  /* حد علوي ذهبي فخم */
   border-top: 4px solid #d4af37;
+  box-shadow: 0 -5px 20px rgba(0,0,0,0.03);
 }
 
 .container {
@@ -28,27 +31,33 @@
 }
 
 .footer-logo h3 {
-  color: #d4af37;
-  font-size: 1.4rem;
+  /* ذهبي متدرج ليظهر كأنه معدن */
+  background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.6rem;
+  font-weight: 800;
   margin: 0;
 }
 
 .gold-icon {
   color: #d4af37;
   font-size: 1.8rem;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
 }
 
 /* الوصف */
 .brand-desc {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   line-height: 1.8;
-  color: #aaa;
+  color: #5d5d5d; /* رمادي دافئ بدلاً من الأبيض */
 }
 
 /* العناوين */
 .footer-title {
-  color: #fff;
-  font-size: 1.1rem;
+  color: #2c2c2c; /* لون أسود خفيف جداً (Charcoal) لإبراز العناوين */
+  font-size: 1.15rem;
+  font-weight: 700;
   margin-bottom: 25px;
   position: relative;
   padding-bottom: 10px;
@@ -59,9 +68,9 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 30px;
+  width: 40px;
   height: 2px;
-  background: #d4af37;
+  background: linear-gradient(to left, #d4af37, #e6c875);
 }
 
 /* الروابط */
@@ -76,14 +85,15 @@
 }
 
 .footer-links a {
-  color: #aaa;
+  color: #707070; /* فضي رمادي */
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
 }
 
 .footer-links a:hover {
-  color: #d4af37;
-  padding-right: 8px;
+  color: #b38728; /* ذهبي أغمق عند التمرير */
+  padding-right: 10px;
 }
 
 /* التواصل */
@@ -91,34 +101,41 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 15px;
-  color: #aaa;
-  font-size: 0.9rem;
+  margin-bottom: 18px;
+  color: #555;
+  font-size: 0.95rem;
 }
 
 .contact-list i {
   color: #d4af37;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 /* السوشيال */
+.social-links {
+  margin-top: 15px;
+}
+
 .social-links a {
   color: #d4af37;
-  margin: 0 10px;
-  font-size: 1.2rem;
-  transition: 0.3s;
+  margin: 0 12px;
+  font-size: 1.3rem;
+  transition: 0.4s;
 }
+
 .social-links a:hover {
-  color: #fff;
+  color: #a67c00;
+  transform: translateY(-3px);
 }
 
 /* الجزء السفلي */
 .footer-bottom {
-  background-color: #111;
-  padding: 20px 0;
-  border-top: 1px solid #333;
-  font-size: 0.85rem;
-  color: #666;
+  /* خلفية فضية فاتحة جداً لتمييز الجزء السفلي */
+  background-color: #f0f0f0;
+  padding: 25px 0;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.9rem;
+  color: #888;
 }
 
 .bottom-flex {
@@ -128,13 +145,14 @@
 }
 
 .bottom-links a {
-  color: #666;
+  color: #888;
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0 15px;
+  transition: 0.3s;
 }
 
 .bottom-links a:hover {
-  color: #aaa;
+  color: #d4af37;
 }
 
 /* Responsive */

@@ -1,6 +1,7 @@
 .vision-section {
   padding: 100px 0;
-  background-color: #1a1a1a; /* خلفية غامقة لإظهار الأيقونات الذهبية */
+  /* خلفية كريمية فاتحة جداً توحي بالفخامة */
+  background-color: #fcfbf7;
   direction: rtl;
   position: relative;
 }
@@ -11,63 +12,77 @@
 }
 
 .vision-main-title {
-  color: #fff;
+  /* لون كحلي ملكي غامق جداً أو رمادي دافئ بدلاً من الأبيض */
+  color: #2c2c2c;
   font-size: 2.5rem;
   margin-bottom: 15px;
+  font-weight: 800;
 }
 
 .vision-subtitle {
-  color: #aaa;
+  /* رمادي فضي هادئ */
+  color: #7f8c8d;
   font-size: 1.1rem;
 }
 
-.gold-text { color: #d4af37; }
+/* لون الذهب الأساسي */
+.gold-text { color: #c5a059; }
 
 /* شبكة الكروت */
 .vision-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
+  padding: 0 20px;
 }
 
 .vision-card {
-  background: rgba(255, 255, 255, 0.03);
+  /* خلفية بيضاء صافية مع ظل ناعم جداً */
+  background: #ffffff;
   padding: 40px 30px;
   border-radius: 20px;
-  border: 1px solid rgba(212, 175, 55, 0.1);
+  /* برواز فضي خفيف جداً */
+  border: 1px solid #e0e0e0;
   text-align: center;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
 }
 
 .vision-card:hover {
-  background: rgba(212, 175, 55, 0.05);
+  background: #fff;
   transform: translateY(-15px);
-  border-color: #d4af37;
+  /* يتغير البرواز للذهب عند الهوفر */
+  border-color: #c5a059;
+  box-shadow: 0 20px 40px rgba(197, 160, 89, 0.15);
 }
 
 /* تصميم الأيقونات */
 .icon-box {
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   margin: 0 auto 25px;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
+  /* دائرة فضية خلف الأيقونة */
+  background: #f9f9f9;
+  border-radius: 50%;
 }
 
 .gold-icon {
   font-size: 2.5rem;
-  color: #d4af37;
+  /* تدرج ذهبي للأيقونة */
+  color: #c5a059;
   transition: 0.5s;
 }
 
 .vision-card:hover .gold-icon {
-  transform: rotateY(360deg); /* تأثير دوران كريتيف */
-  color: #fff;
+  transform: rotateY(360deg);
+  color: #b38f4d;
 }
 
 .icon-pulse {
@@ -77,7 +92,8 @@
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  background: rgba(212, 175, 55, 0.2);
+  /* نبض ذهبي فاتح */
+  background: rgba(197, 160, 89, 0.1);
   border-radius: 50%;
   z-index: -1;
   animation: pulse 2s infinite;
@@ -85,37 +101,40 @@
 
 @keyframes pulse {
   0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.8; }
-  100% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+  100% { transform: translate(-50%, -50%) scale(1.4); opacity: 0; }
 }
 
 /* نصوص الكارت */
 .vision-card h3 {
-  color: #fff;
+  color: #333;
   font-size: 1.4rem;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
 .vision-card p {
-  color: #bbb;
+  /* رمادي غامق للقراءة المريحة */
+  color: #666;
   line-height: 1.8;
   font-size: 0.95rem;
 }
 
-/* خط تزييني في الأسفل */
+/* خط تزييني ذهبي */
 .card-line {
   width: 40px;
-  height: 3px;
-  background: #d4af37;
+  height: 2px;
+  background: #c5a059;
   margin: 25px auto 0;
   transition: 0.4s;
 }
 
 .vision-card:hover .card-line {
-  width: 100%;
+  width: 80px;
+  background: #b38f4d;
 }
 
 /* التجاوب */
 @media (max-width: 768px) {
   .vision-main-title { font-size: 2rem; }
+  .vision-section { padding: 60px 0; }
 }

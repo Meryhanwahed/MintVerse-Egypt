@@ -1,6 +1,7 @@
 .facts-section {
   padding: 80px 0;
-  background: #1a1a1a; /* خلفية سوداء فخمة */
+  /* خلفية فاتحة جداً (كريمي ملكي) */
+  background: #fdfbf7;
   direction: rtl;
 }
 
@@ -16,61 +17,77 @@
   align-items: center;
   gap: 20px;
   padding: 30px;
-  background: rgba(255, 255, 255, 0.02);
+  /* خلفية بيضاء نقية مع ظل ناعم */
+  background: #ffffff;
   border-radius: 20px;
-  border: 1px solid rgba(212, 175, 55, 0.1);
-  transition: 0.4s;
+  /* حدود سلفر خفيفة جداً */
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  transition: 0.4s ease-in-out;
 }
 
 .fact-item:hover {
-  background: rgba(212, 175, 55, 0.05);
-  transform: translateY(-5px);
+  /* تغيير الخلفية عند الهوفر لدرجة ذهبية باهتة */
+  background: #fffcf5;
+  transform: translateY(-8px);
+  /* حدود ذهبية واضحة عند التفاعل */
   border-color: #d4af37;
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
 }
 
 .fact-icon {
   width: 70px;
   height: 70px;
-  background: linear-gradient(135deg, #d4af37, #b8860b);
-  border-radius: 15px;
+  /* تدرج ذهبي لامع */
+  background: linear-gradient(135deg, #d4af37, #f1d592);
+  border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.8rem;
-  color: #1a1a1a;
-  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+  /* لون الأيقونة أبيض ليتباين مع الجولد */
+  color: #fff;
+  box-shadow: 0 8px 15px rgba(212, 175, 55, 0.3);
 }
 
 .counter-value {
   font-size: 2.5rem;
   font-weight: 900;
-  color: #fff;
+  /* لون نص "برونزي" غامق بدلاً من الأسود */
+  color: #5d4a1b;
   margin-bottom: 5px;
-  font-family: 'Arial', sans-serif; /* لضمان وضوح الأرقام */
+  font-family: 'Amiri', serif;
 }
 
 .fact-label {
-  color: #aaa;
+  /* لون سلفر داكن للنصوص الثانوية */
+  color: #8e8e8e;
   font-size: 1rem;
   font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-/* خط ديكوري يتحرك عند الـ Hover */
+/* خط ديكوري سلفر يتحول لذهبي */
 .fact-decoration {
   position: absolute;
   bottom: 0;
   right: 0;
   width: 0;
-  height: 3px;
-  background: #d4af37;
-  transition: 0.5s;
-  border-radius: 0 0 20px 0;
+  height: 4px;
+  background: linear-gradient(to left, #d4af37, #c0c0c0);
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 0 0 20px 20px;
 }
 
 .fact-item:hover .fact-decoration {
-  width: 60%;
+  width: 100%; /* الخط يغطي العرض بالكامل ليعطي فخامة */
 }
 
 @media (max-width: 768px) {
-  .fact-item { justify-content: center; text-align: center; flex-direction: column; }
+  .fact-item {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 40px 20px;
+  }
 }
