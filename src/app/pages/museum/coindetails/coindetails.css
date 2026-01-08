@@ -6,7 +6,24 @@
   padding: 40px;
   direction: rtl;
 }
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #d4af37; /* ذهبي */
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none; /* لإزالة الخط تحت الرابط */
+  font-weight: bold;
+  transition: 0.3s;
+  margin-right: 25px;
+}
 
+.download-btn:hover {
+  background-color: #aa771c; /* ذهبي أغمق */
+  transform: translateY(-2px);
+}
 .back-btn {
   background: #fff;
   color: #b8860b; /* ذهبي داكن للقراءة */

@@ -12,12 +12,47 @@
 
     <nav class="main-nav">
       <ul>
-        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">الرئيسية</a></li>
-        <li><a routerLink="/about" routerLinkActive="active">عن المنصة</a></li>
-        <li><a routerLink="/museum" routerLinkActive="active">المتحف</a></li>
-        <li><a routerLink="/mint" routerLinkActive="active">الضربخانة</a></li>
-        <li><a routerLink="/marketplace" routerLinkActive="active">المتجر</a></li>
-      </ul>
+    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">الرئيسية</a></li>
+
+    <li class="has-dropdown">
+      <a routerLink="/about" routerLinkActive="active">عن المنصة <i class="fas fa-chevron-down dropdown-icon"></i></a>
+      <div class="dropdown-menu">
+        <a routerLink="/" fragment="journey">تاريخ المصلحة</a>
+        <a routerLink="/about/vision">رؤيتنا وأهدافنا</a>
+        <a routerLink="/about/news">آخر الأخبار</a>
+      </div>
+    </li>
+
+    <li class="has-dropdown">
+      <a routerLink="/museum" routerLinkActive="active">المتحف <i class="fas fa-chevron-down dropdown-icon"></i></a>
+      <div class="dropdown-menu">
+        <a routerLink="/museum/gold">المسكوكات الذهبية</a>
+        <a routerLink="/museum/silver">العملات الفضية</a>
+        <a routerLink="/museum/rare">النوادر الملكية</a>
+      </div>
+    </li>
+
+    <li class="has-dropdown">
+      <a routerLink="/mint" routerLinkActive="active">الضربخانة <i class="fas fa-chevron-down dropdown-icon"></i></a>
+      <div class="dropdown-menu">
+        <a routerLink="/mint/process">مراحل السك</a>
+        <a routerLink="/mint/machinery">الآلات التاريخية</a>
+        <a routerLink="/mint/qala">دار الضرب بالقلعة</a>
+      </div>
+    </li>
+
+    <li class="has-dropdown">
+      <a routerLink="/marketplace" routerLinkActive="active">المتجر <i class="fas fa-chevron-down dropdown-icon"></i></a>
+      <div class="dropdown-menu">
+        <a routerLink="/" fragment="souvenir">الهدايا </a>
+        <a routerLink="/mint/machinery">الآلات التاريخية</a>
+        <a routerLink="/mint/qala">دار الضرب بالقلعة</a>
+      </div>
+    </li>
+
+
+
+  </ul>
     </nav>
 
     <div class="header-actions">

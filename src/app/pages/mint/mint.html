@@ -1,4 +1,151 @@
-<app-identity></app-identity>
-<app-production></app-production>
-<app-infographic></app-infographic>
-<app-museum-integration></app-museum-integration>
+<div class="mint-page">
+  <header class="mint-hero" data-aos="fade-down">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="title-frame">
+        <h1>تاريخ الضربخانة المصرية</h1>
+        <div class="gold-line"></div>
+      </div>
+      <p class="hero-intro">
+        رحلة عبر الزمن في "دار السك" التي جسدت سيادة الدولة المصرية منذ عهد محمد علي باشا.
+      </p>
+    </div>
+  </header>
+
+  <section class="info-section container">
+    <div class="glass-card" data-aos="fade-right">
+      <h2 class="section-title"><i class="fas fa-landmark"></i> ماهية الضربخانة</h2>
+      <div class="content-grid">
+        <div class="text-block">
+          <p><strong>الضربخانة لغة:</strong> كلمة مركبة من "ضرب" (سك وطبع العملة) و"خانة" بالفارسية تعني دار، أي <strong>"دار الضرب"</strong>.</p>
+          <p><strong>اصطلاحاً:</strong> هي المؤسسة الرسمية المختصة بسك النقود وفق النظام الذي تقرره الدولة، وتعرف علمياً بـ <strong>Numismatics</strong>.</p>
+        </div>
+        <div class="quote-box">
+          "جدد هذا المكان المبارك الوزير الأعظم محمد علي باشا مصر حالاً عام 1227هـ"
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mint-divisions-section">
+    <div class="container">
+      <h2 class="section-title text-center gold-gradient">أدوار الضربخانة بالقلعة</h2>
+      <p class="section-subtitle">تنقسم دور الضرب إلى ثلاثة أدوار رئيسية عكست التطور التاريخي والمعماري.</p>
+
+      <div class="divisions-grid">
+        <div class="division-card" data-aos="fade-up" data-aos-delay="100">
+          <span class="division-letter">(أ)</span>
+          <h3>الدار الجركسية</h3>
+          <p>تقع في أقصى الركن الجنوبي لسور القلعة. بنيت جدرانها بالحجر الجيري وتوسطها صحن مستطيل مكشوف.</p>
+        </div>
+        <div class="division-card" data-aos="fade-up" data-aos-delay="200">
+          <span class="division-letter">(ب)</span>
+          <h3>الدار العثمانية الأولى والثانية</h3>
+          <p>تقع شمال الدار الجركسية وملاصقة للسور الشرقي. تميزت بقاعة كبرى يتوسطها مثمن يعلوه قبة كبرى (اندثرت حالياً).</p>
+        </div>
+        <div class="division-card" data-aos="fade-up" data-aos-delay="300">
+          <span class="division-letter">(ج)</span>
+          <h3>دار محمد علي "الضربخانة"</h3>
+          <p>تمثل حوالي خمسة أضعاف الدار الجركسية مساحة، واشتهرت بالآلات الحديثة التي ضربت سكة عصرية ومتقنة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="maps-section">
+    <div class="container">
+      <h2 class="section-title text-center gold-gradient">خرائط توضيحية</h2>
+      <p class="section-subtitle">استكشف مواقع الضربخانة المختلفة داخل قلعة صلاح الدين.</p>
+
+      <div class="map-gallery">
+        <div class="map-item" data-aos="zoom-in-up" data-aos-delay="100">
+          <img src="assets/images/map/1.png" alt="خريطة عموم القلعة" class="img-fluid" (click)="openLightbox('map_qala_overview.jpg')">
+          <p class="map-caption">
+خريطة رقم (1) توضح رسم عموم القلعة
+</p>
+        </div>
+        <div class="map-item" data-aos="zoom-in-up" data-aos-delay="200">
+          <img src="assets/images/map/2.png" alt="رسم توضيحي لمكان الضربخانة" class="img-fluid" (click)="openLightbox('map_darbkhana_location.jpg')">
+          <p class="map-caption">خريطة رقم (2) رسم توضيحي لمكان الضربخانة بالقلعة</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process-section shadow-text">
+  <div class="container">
+    <h2 class="section-title text-center gold-gradient">مسار سبك الذهب والفضة</h2>
+    <p class="section-subtitle">من السبائك الخام إلى المسكوكات الملكية</p>
+
+    <div class="process-steps">
+      <div class="step-card" data-aos="zoom-in" data-step="1">
+        <div class="step-img-wrapper">
+          <img src="assets/images/steps/1.png" alt="الاستلام والجشنجة">
+        </div>
+        <!-- <div class="step-icon"><i class="fas fa-balance-scale"></i></div> -->
+        <h3>الاستلام والجشنجة</h3>
+        <p>إحضار السبائك بمعرفة السباك والجاشنجي لوزنها وتحريرها بالدمغة الرسمية لضمان العيار.</p>
+      </div>
+
+      <div class="step-card" data-aos="zoom-in" data-step="2">
+        <div class="step-img-wrapper">
+          <img src="assets/images/steps/2.png" alt="تعديل العيار والسبك">
+        </div>
+        <!-- <div class="step-icon"><i class="fas fa-fire"></i></div> -->
+        <h3>تعديل العيار والسبك</h3>
+        <p>تعديل العيارات لتناسب عيار المصلحة، وتتم عملية السبك بحضور "الأمين" ثم تسليمها لورش التشغيل.</p>
+      </div>
+
+      <div class="step-card" data-aos="zoom-in" data-step="3">
+        <div class="step-img-wrapper">
+          <img src="assets/images/steps/3.png" alt="الجلاء والختم">
+        </div>
+        <!-- <div class="step-icon"><i class="fas fa-gem"></i></div> -->
+        <h3>الجلاء والختم</h3>
+        <p>تمر العملة بورشة "الجلاء" ثم ورشة "الختامين" لنحت السكة عليها، ثم الفرز النهائي واستبعاد الخردة.</p>
+      </div>
+
+      <div class="step-card" data-aos="zoom-in" data-step="4">
+        <div class="step-img-wrapper">
+          <img src="assets/images/steps/4.png" alt="الضبط والحسابات">
+        </div>
+        <!-- <div class="step-icon"><i class="fas fa-file-invoice-dollar"></i></div> -->
+        <h3>الضبط والحسابات</h3>
+        <p>تسجيل البيانات في "سراكي" يومية، وإضافة قيمة النحاس المضاف للحسابات لضمان موازنة حاصل السبائك.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="admin-section container">
+    <div class="grid-2">
+      <div class="info-card silver-gradient" data-aos="fade-up">
+        <h3><i class="fas fa-users-cog"></i> نظام الأسطاوات والعمالة</h3>
+        <p>كانت الضربخانة تضم كبار المعلمين (الأسطاوات). في عهد محمد علي، تم تطوير الآلات لتقليل العمالة من 500 إلى 40 صانعاً ماهراً لزيادة الدقة وتقليل النفقات.</p>
+      </div>
+      <div class="info-card gold-gradient-bg" data-aos="fade-up">
+        <h3><i class="fas fa-shield-alt"></i> الرقابة والجرد</h3>
+        <p>يتم جرد يومي لكل عهدة، وتوضع الأرباح في بند الإيرادات بعد خصم أجور الشغالة والمصروفات، لضمان أعلى مستويات النزاهة المالية.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="study-cta-section" data-aos="zoom-in">
+  <div class="container text-center">
+    <div class="cta-content">
+      <div class="cta-icon">
+        <i class="fas fa-scroll"></i>
+      </div>
+      <h2 class="gold-gradient">الأبحاث والدراسات التاريخية</h2>
+      <p>اطلع على الدراسة الكاملة والموثقة حول تاريخ الضربخانة المصرية، وتطور دور السك عبر العصور.</p>
+
+      <a href="assets/documents/mint-study.pdf" target="_blank" class="study-large-btn">
+        <span class="btn-text">شاهد الدراسة الخاصة بالضربخانة</span>
+        <span class="btn-icon"><i class="fas fa-external-link-alt"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</div>

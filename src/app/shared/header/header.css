@@ -100,7 +100,7 @@
   background: #d4af37;
 }
 
- 
+
 .header-actions {
   display: flex;
   align-items: center;
@@ -148,4 +148,84 @@
 @media (max-width: 992px) {
   .main-nav { display: none; }
   .mobile-menu-btn { display: flex; }
+}
+
+
+
+/* تنسيق السهم الصغير بجانب الكلمة */
+.dropdown-icon {
+  font-size: 0.7rem;
+  margin-right: 5px;
+  transition: 0.3s;
+}
+
+/* ضبط العنصر الأب */
+.has-dropdown {
+  position: relative; /* ضروري لضبط مكان القائمة المنسدلة */
+}
+
+/* تصميم القائمة المنسدلة */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 220px;
+  background-color: #ffffff;
+  border-top: 3px solid #d4af37; /* خط ذهبي في الأعلى */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+
+  /* إخفاء القائمة في الحالة العادية */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px); /* تأثير حركة من أسفل لأعلى */
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+/* روابط القائمة المنسدلة */
+.dropdown-menu a {
+  padding: 12px 20px !important;
+  font-size: 0.9rem !important;
+  color: #1a1a1a !important;
+  font-weight: 500 !important;
+  border-bottom: 1px solid #f5f5f5;
+  transition: 0.2s !important;
+}
+
+.dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+/* تأثير الـ Hover على روابط القائمة المنسدلة */
+.dropdown-menu a:hover {
+  background-color: #fcf6ba; /* خلفية ذهبية فاتحة جداً */
+  color: #b8860b !important;
+  padding-right: 25px !important; /* حركة بسيطة لليمين */
+}
+
+/* إظهار القائمة عند الوقوف على العنصر الأب */
+.has-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* تدوير السهم عند الـ Hover */
+.has-dropdown:hover .dropdown-icon {
+  transform: rotate(180deg);
+  color: #d4af37;
+}
+
+/* إضافة مساحة شفافة تحت اللينك لمنع اختفاء القائمة عند محاولة النزول إليها */
+.has-dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  height: 20px;
 }
